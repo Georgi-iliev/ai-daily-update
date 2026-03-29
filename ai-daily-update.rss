@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>AI Daily Update</title>
+    <description>High-signal AI news curated daily from 12+ sources â covering OpenAI, Google, Anthropic, Meta, Microsoft, hardware, enterprise, tools, policy, and funding.</description>
+    <link>ai-daily-update.html</link>
+    <atom:link href="ai-daily-update.rss" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Mar 2026 08:00:00 +0000</lastBuildDate>
+    <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+    <ttl>360</ttl>
+    <image>
+      <title>AI Daily Update</title>
+      <link>ai-daily-update.html</link>
+      <url>https://via.placeholder.com/144x144/4f7fff/ffffff?text=AI</url>
+    </image>
+
+    <!-- âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+         THE BIG THREE
+    âââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+
+    <item>
+      <title>[#1 TOP STORY] Anthropic's "Claude Mythos" Leaked â Described as a "Step Change" in AI Power</title>
+      <link>https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/</link>
+      <description><![CDATA[
+        <p><strong>Category: Anthropic | Top Story</strong></p>
+        <p>A data cache exposure revealed Anthropic is testing a new model called Claude Mythos, described internally as "the most capable we've ever built." A draft blog post warned it poses <em>unprecedented cybersecurity risks</em> â the most serious safety caveat Anthropic has ever attached to a model. The model was described as a "step change" in AI capabilities, with early access customers already testing it.</p>
+        <p><a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/">Read more on Fortune</a></p>
+        <p><a href="https://siliconangle.com/2026/03/27/anthropic-launch-new-claude-mythos-model-advanced-reasoning-features/">Additional coverage on SiliconANGLE</a></p>
+      ]]></description>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-story-001</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Anthropic</category>
+      <category>Top Story</category>
+      <category>Models</category>
+    </item>
+
+    <item>
+      <title>[#2 TOP STORY] OpenAI Launches GPT-5.4 with Pro, Thinking and Mini Variants + 1M Token Context</title>
+      <link>https://openai.com/index/introducing-gpt-5-4/</link>
+      <description><![CDATA[
+        <p><strong>Category: OpenAI | Major Release</strong></p>
+        <p>GPT-5.4 arrives in three configurations â Standard, Thinking (extended chain-of-thought), and Pro â with a 1 million token context window in the API, record scores on OSWorld-Verified and WebArena computer use benchmarks, and 33% fewer factual errors than GPT-5.2. New GPT-5.4 mini and nano variants target on-device and low-latency deployments, with mini running 2x faster than GPT-5 mini.</p>
+        <p><a href="https://openai.com/index/introducing-gpt-5-4/">Read more on OpenAI Blog</a></p>
+        <p><a href="https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/">Coverage on TechCrunch</a></p>
+        <p><a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/">GPT-5.4 mini and nano announcement</a></p>
+      ]]></description>
+      <pubDate>Thu, 05 Mar 2026 10:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-story-002</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>OpenAI</category>
+      <category>Top Story</category>
+      <category>Models</category>
+      <category>Release</category>
+    </item>
+
+    <item>
+      <title>[#3 TOP STORY] NVIDIA Unveils Vera Rubin Platform at GTC 2026 â 10x Cheaper Inference, 6 New Chips</title>
+      <link>https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer</link>
+      <description><![CDATA[
+        <p><strong>Category: Hardware | Infrastructure</strong></p>
+        <p>At GTC 2026, NVIDIA revealed its Vera Rubin platform: 6 new chips (Vera CPU, Rubin GPU, NVLink 6, ConnectX-9, BlueField-4, Groq 3 LPU) now in full production, delivering up to 10x reduction in inference token cost and 4x fewer GPUs needed for training MoE models vs. Blackwell. CEO Jensen Huang declared the "AGI era is here." AWS, Google Cloud, Microsoft Azure, and OCI are the first cloud providers to deploy Rubin-based instances in 2026.</p>
+        <p><a href="https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer">Read more on NVIDIA Newsroom</a></p>
+        <p><a href="https://www.cnbc.com/2026/03/13/nvidia-gtc-ai-jensen-huang-cpu-gpu.html">Analysis on CNBC</a></p>
+      ]]></description>
+      <pubDate>Mon, 16 Mar 2026 09:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-story-003</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Hardware</category>
+      <category>NVIDIA</category>
+      <category>Infrastructure</category>
+      <category>Top Story</category>
+    </item>
+
+    <!-- âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+         TOOL SPOTLIGHT
+    âââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+
+    <item>
+      <title>[TOOL SPOTLIGHT] Google Gemini "Import Memory" â Switch AI Assistants Without Losing Your Context</title>
+      <link>https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/</link>
+      <description><![CDATA[
+        <p><strong>Category: Google | Tool Spotlight</strong></p>
+        <p><strong>Why it matters:</strong> For the first time, users can upload entire ChatGPT or Claude chat histories and personalization data directly into Gemini â turning AI platform switching from a painful fresh start into a seamless migration. This is Google's most aggressive user-acquisition move in the AI wars yet.</p>
+        <p>Two tools launched March 26: "Add Memory" (imports personalization from rivals) and "Import Chats" (ZIP file upload of full conversation history). Available now in the U.S. Gemini app. Personal Intelligence features (Gmail, Photos, YouTube integration) also now free for all users. Gemini Live on 3.1 also improves context retention to 2x.</p>
+        <p><a href="https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/">Read more on TechCrunch</a></p>
+        <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/">Full Gemini March Drop on Google Blog</a></p>
+      ]]></description>
+      <pubDate>Thu, 26 Mar 2026 14:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-spotlight-001</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Google</category>
+      <category>Tool Spotlight</category>
+      <category>Gemini</category>
+      <category>Tools</category>
+    </item>
+
+    <!-- âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+         QUICK HITS
+    âââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+
+    <item>
+      <title>Claude Computer Use Goes Live â AI That Navigates Your Desktop Autonomously</title>
+      <link>https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html</link>
+      <description><![CDATA[
+        <p><strong>Category: Anthropic | Agentic Tools</strong></p>
+        <p>Anthropic's Computer Use feature is now generally available, allowing Claude to click, scroll, and take actions on users' computers to complete multi-step tasks without manual intervention.</p>
+        <p><a href="https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html">Source: CNBC</a></p>
+      ]]></description>
+      <pubDate>Mon, 24 Mar 2026 11:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-001</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Anthropic</category>
+      <category>Agentic</category>
+      <category>Tools</category>
+    </item>
+
+    <item>
+      <title>Anthropic Weighs IPO as Early as October 2026, Racing OpenAI</title>
+      <link>https://www.bloomberg.com/news/articles/2026-03-27/claude-ai-maker-anthropic-said-to-weigh-ipo-as-soon-as-october</link>
+      <description><![CDATA[
+        <p><strong>Category: Anthropic | Funding</strong></p>
+        <p>The Claude maker is considering going public as soon as Q4 2026 as it hits record paid subscriber growth, competing with OpenAI in a race to access public capital markets.</p>
+        <p><a href="https://www.bloomberg.com/news/articles/2026-03-27/claude-ai-maker-anthropic-said-to-weigh-ipo-as-soon-as-october">Source: Bloomberg</a></p>
+      ]]></description>
+      <pubDate>Fri, 27 Mar 2026 08:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-002</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Anthropic</category>
+      <category>Funding</category>
+      <category>IPO</category>
+    </item>
+
+    <item>
+      <title>Anthropic Wins Pentagon Lawsuit â Federal Judge Grants Preliminary Injunction</title>
+      <link>https://www.cnbc.com/2026/03/26/anthropic-pentagon-dod-claude-court-ruling.html</link>
+      <description><![CDATA[
+        <p><strong>Category: Anthropic | Policy</strong></p>
+        <p>A federal judge in San Francisco granted Anthropic's injunction against its DoD blacklisting, citing "First Amendment retaliation." Federal agencies can now resume using Claude models.</p>
+        <p><a href="https://www.cnbc.com/2026/03/26/anthropic-pentagon-dod-claude-court-ruling.html">Source: CNBC</a></p>
+      ]]></description>
+      <pubDate>Wed, 26 Mar 2026 17:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-003</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Anthropic</category>
+      <category>Policy</category>
+      <category>Government</category>
+    </item>
+
+    <item>
+      <title>Microsoft Copilot Leadership Shakeup â Suleyman Freed to Build New Models</title>
+      <link>https://www.cnbc.com/2026/03/17/microsoft-copilot-ai-suleyman.html</link>
+      <description><![CDATA[
+        <p><strong>Category: Microsoft | Copilot</strong></p>
+        <p>Satya Nadella restructured Microsoft's AI org: former Snap exec Jacob Andreou takes Copilot UX lead, freeing Mustafa Suleyman to focus on superintelligence model development.</p>
+        <p><a href="https://www.cnbc.com/2026/03/17/microsoft-copilot-ai-suleyman.html">Source: CNBC</a></p>
+        <p><a href="https://blogs.microsoft.com/blog/2026/03/17/announcing-copilot-leadership-update/">Official Microsoft Blog</a></p>
+      ]]></description>
+      <pubDate>Tue, 17 Mar 2026 09:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-004</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Microsoft</category>
+      <category>Copilot</category>
+      <category>Leadership</category>
+    </item>
+
+    <item>
+      <title>Microsoft Pulls Back Copilot AI Bloat from Windows â "Less Is More" Pivot</title>
+      <link>https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/</link>
+      <description><![CDATA[
+        <p><strong>Category: Microsoft | Copilot | Tools</strong></p>
+        <p>Microsoft is scaling back Copilot integrations in Photos, Widgets, Notepad, and Snipping Tool, focusing on experiences that are "genuinely useful." The app has only 6M daily active users vs. ChatGPT's 440M and Gemini's 82M.</p>
+        <p><a href="https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/">Source: TechCrunch</a></p>
+      ]]></description>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-005</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Microsoft</category>
+      <category>Copilot</category>
+      <category>Tools</category>
+    </item>
+
+    <item>
+      <title>Gemini Code Assist Now Free for All Individual Developers</title>
+      <link>https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/</link>
+      <description><![CDATA[
+        <p><strong>Category: Google | Dev Tools</strong></p>
+        <p>Google made Gemini Code Assist â including full VS Code and JetBrains IDE plugins â entirely free for individual developers, dramatically undercutting GitHub Copilot pricing.</p>
+        <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/">Source: Google Blog</a></p>
+      ]]></description>
+      <pubDate>Thu, 26 Mar 2026 10:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-006</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Google</category>
+      <category>Tools</category>
+      <category>Dev Tools</category>
+    </item>
+
+    <item>
+      <title>Gemini AI Agents Now Crawling the Dark Web â 10M Posts/Day Threat Intel</title>
+      <link>https://www.theregister.com/2026/03/23/google_dark_web_ai/</link>
+      <description><![CDATA[
+        <p><strong>Category: Google | Enterprise</strong></p>
+        <p>Google's Gemini agents are in public preview for dark web intelligence, scanning 10M+ posts daily to surface organization-specific threats inside Google Threat Intelligence platform.</p>
+        <p><a href="https://www.theregister.com/2026/03/23/google_dark_web_ai/">Source: The Register</a></p>
+      ]]></description>
+      <pubDate>Sun, 23 Mar 2026 08:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-007</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Google</category>
+      <category>Enterprise</category>
+      <category>Security</category>
+    </item>
+
+    <item>
+      <title>Meta Expanding MTIA Custom Silicon â 4 New Chip Generations in 2 Years</title>
+      <link>https://about.fb.com/news/2026/03/expanding-metas-custom-silicon-to-power-our-ai-workloads/</link>
+      <description><![CDATA[
+        <p><strong>Category: Meta | Hardware</strong></p>
+        <p>Meta announced it will develop and deploy four generations of its MTIA (Meta Training and Inference Accelerator) chips within two years to support GenAI and ranking/recommendation workloads, reducing dependency on NVIDIA.</p>
+        <p><a href="https://about.fb.com/news/2026/03/expanding-metas-custom-silicon-to-power-our-ai-workloads/">Source: Meta Newsroom</a></p>
+      ]]></description>
+      <pubDate>Sat, 21 Mar 2026 09:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-008</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Meta</category>
+      <category>Hardware</category>
+      <category>Infrastructure</category>
+    </item>
+
+    <item>
+      <title>OpenAI GPT-5.4 Mini and Nano Released for On-Device and Low-Latency Apps</title>
+      <link>https://openai.com/index/introducing-gpt-5-4-mini-and-nano/</link>
+      <description><![CDATA[
+        <p><strong>Category: OpenAI | Small Models</strong></p>
+        <p>The new mini variant runs 2x faster than GPT-5 mini with major improvements in coding, reasoning, and multimodal understanding. Nano targets sub-100ms applications and on-device deployment.</p>
+        <p><a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/">Source: OpenAI Blog</a></p>
+      ]]></description>
+      <pubDate>Fri, 20 Mar 2026 14:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-009</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>OpenAI</category>
+      <category>Tools</category>
+      <category>Small Models</category>
+    </item>
+
+    <item>
+      <title>Model Context Protocol Crosses 97M Installs â Now the Universal Agentic Standard</title>
+      <link>https://dev.to/ajay_kumar_1daef5fe089885/ai-developer-tools-enter-autonomous-era-the-rise-of-agentic-systems-in-march-2026-31l0</link>
+      <description><![CDATA[
+        <p><strong>Category: Tools | Open Source | Agentic</strong></p>
+        <p>MCP crossed 97 million installs in March 2026, with every major AI provider now shipping MCP-compatible tooling, cementing it as the foundational protocol for agentic AI infrastructure.</p>
+        <p><a href="https://dev.to/ajay_kumar_1daef5fe089885/ai-developer-tools-enter-autonomous-era-the-rise-of-agentic-systems-in-march-2026-31l0">Source: DEV Community</a></p>
+      ]]></description>
+      <pubDate>Sat, 29 Mar 2026 07:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-010</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Tools</category>
+      <category>Agentic</category>
+      <category>Open Source</category>
+    </item>
+
+    <item>
+      <title>Accenture + Databricks Launch Joint Business Group for Enterprise AI Scaling</title>
+      <link>https://newsroom.accenture.com/news/2026/accenture-and-databricks-accelerate-enterprise-adoption-of-ai-applications-and-agents-at-scale</link>
+      <description><![CDATA[
+        <p><strong>Category: Enterprise | Agentic</strong></p>
+        <p>Accenture and Databricks launched a joint "Accenture Databricks Business Group" to help enterprises move AI from pilot to production using a unified data and agent platform. First major client: Albertsons Companies, building agentic pricing intelligence.</p>
+        <p><a href="https://newsroom.accenture.com/news/2026/accenture-and-databricks-accelerate-enterprise-adoption-of-ai-applications-and-agents-at-scale">Source: Accenture Newsroom</a></p>
+      ]]></description>
+      <pubDate>Tue, 17 Mar 2026 10:00:00 +0000</pubDate>
+      <guid isPermaLink="false">ai-daily-2026-03-29-quick-011</guid>
+      <dc:creator>AI Daily Update</dc:creator>
+      <category>Enterprise</category>
+      <category>Agentic</category>
+      <category>Tools</category>
+    </item>
+
+  </channel>
+</rss>
