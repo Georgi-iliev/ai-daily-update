@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>AI Daily Update</title>
+    <link>https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.html</link>
+    <description>Daily high-signal AI intelligence digest. Updated every morning at 8 AM.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Mar 2026 08:00:00 +0000</lastBuildDate>
+    <ttl>1440</ttl>
+    <atom:link href="https://georgi-iliev.github.io/ai-daily-update/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Claude Mythos Leaked - Unprecedented Cybersecurity Risk</title>
+      <link>https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/</link>
+      <description>Anthropic most powerful model yet leaked. Step change beyond Opus 4.6 with higher scores in coding, reasoning and cybersecurity benchmarks.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Anthropic</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">anthropic-mythos-leak-2026-03-29</guid>
+    </item>
+    <item>
+      <title>OpenAI GPT-5.4 - 1M Token Context, 33 Percent Fewer Hallucinations</title>
+      <link>https://openai.com/index/introducing-gpt-5-4/</link>
+      <description>GPT-5.4 with 1 million token context, 83 percent on GDPval. Mini and Nano variants followed March 17.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>OpenAI</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">openai-gpt54-2026-03-29</guid>
+    </item>
+    <item>
+      <title>NVIDIA Rubin Platform and Groq 3 LPU - 35x Throughput Leap</title>
+      <link>https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer</link>
+      <description>6 new chips and 128-LPU Groq 3 rack. 35x throughput per megawatt. AWS, Google Cloud, Azure deploy first H2 2026.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Hardware</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">nvidia-rubin-2026-03-29</guid>
+    </item>
+    <item>
+      <title>Tool Spotlight: Claude Computer Use - Autonomous Desktop Agent</title>
+      <link>https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html</link>
+      <description>Claude autonomously controls your desktop for multi-step tasks including booking, file management, and form filling.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Tools</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">claude-computer-use-2026-03-29</guid>
+    </item>
+    <item>
+      <title>White House National AI Policy Framework</title>
+      <link>https://www.cnbc.com/2026/03/20/trump-ai-policy-framework.html</link>
+      <description>7-pillar blueprint pushing federal preemption of state AI laws and industry-led standards over new regulatory bodies.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">whitehouse-ai-policy-2026-03-29</guid>
+    </item>
+    <item>
+      <title>Anthropic Eyes October IPO</title>
+      <link>https://www.bloomberg.com/news/articles/2026-03-27/claude-ai-maker-anthropic-said-to-weigh-ipo-as-soon-as-october</link>
+      <description>Weighing going public as soon as Q4 2026 amid record Claude subscriber growth driven by Super Bowl campaigns and Claude Code.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Anthropic</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">anthropic-ipo-2026-03-29</guid>
+    </item>
+    <item>
+      <title>Gemini 3.1 Live Doubles Context - 750M Users</title>
+      <link>https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/</link>
+      <description>Memory import from competitor AIs, Personal Intelligence free for U.S. users, Lyria 3 Pro for 3-min AI music.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Google</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">gemini-31-2026-03-29</guid>
+    </item>
+    <item>
+      <title>Microsoft Walks Back Copilot Bloat on Windows 11</title>
+      <link>https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/</link>
+      <description>Scaling back Copilot in Photos, Notepad, and Snipping Tool to focus on high-value use cases.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Microsoft</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">microsoft-copilot-2026-03-29</guid>
+    </item>
+    <item>
+      <title>72 Percent of Global 2000 Now Run AI Agents in Production</title>
+      <link>https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/</link>
+      <description>Decisive shift from pilot to deployment. Agentic AI market heading to 94.9 billion in 2026. Customer service and finance lead.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Enterprise</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">enterprise-agents-2026-03-29</guid>
+    </item>
+    <item>
+      <title>Anthropic Wins Pentagon Injunction</title>
+      <link>https://www.cnbc.com/2026/03/26/anthropic-pentagon-dod-claude-court-ruling.html</link>
+      <description>Federal judge reverses DoD blacklisting of Claude models, citing First Amendment retaliation.</description>
+      <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+      <category>Policy</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">anthropic-pentagon-2026-03-29</guid>
+    </item>
+  </channel>
+</rss>
