@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>AI Daily Update</title>
-    <description>High-signal AI news curated daily from 12+ sources â covering OpenAI, Google, Anthropic, Meta, Microsoft, hardware, enterprise, tools, policy, and funding.</description>
+    <description>High-signal AI news curated daily from 12+ sources — covering OpenAI, Google, Anthropic, Meta, Microsoft, hardware, enterprise, tools, policy, and funding.</description>
     <link>ai-daily-update.html</link>
     <atom:link href="ai-daily-update.rss" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
@@ -15,16 +15,16 @@
       <url>https://via.placeholder.com/144x144/4f7fff/ffffff?text=AI</url>
     </image>
 
-    <!-- âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+    <!-- ═══════════════════════════════════════════════════════
          THE BIG THREE
-    âââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+    ═══════════════════════════════════════════════════════ -->
 
     <item>
-      <title>[#1 TOP STORY] Anthropic's "Claude Mythos" Leaked â Described as a "Step Change" in AI Power</title>
+      <title>[#1 TOP STORY] Anthropic's "Claude Mythos" Leaked — Described as a "Step Change" in AI Power</title>
       <link>https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/</link>
       <description><![CDATA[
         <p><strong>Category: Anthropic | Top Story</strong></p>
-        <p>A data cache exposure revealed Anthropic is testing a new model called Claude Mythos, described internally as "the most capable we've ever built." A draft blog post warned it poses <em>unprecedented cybersecurity risks</em> â the most serious safety caveat Anthropic has ever attached to a model. The model was described as a "step change" in AI capabilities, with early access customers already testing it.</p>
+        <p>A data cache exposure revealed Anthropic is testing a new model called Claude Mythos, described internally as "the most capable we've ever built." A draft blog post warned it poses <em>unprecedented cybersecurity risks</em> — the most serious safety caveat Anthropic has ever attached to a model. The model was described as a "step change" in AI capabilities, with early access customers already testing it.</p>
         <p><a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/">Read more on Fortune</a></p>
         <p><a href="https://siliconangle.com/2026/03/27/anthropic-launch-new-claude-mythos-model-advanced-reasoning-features/">Additional coverage on SiliconANGLE</a></p>
       ]]></description>
@@ -41,7 +41,7 @@
       <link>https://openai.com/index/introducing-gpt-5-4/</link>
       <description><![CDATA[
         <p><strong>Category: OpenAI | Major Release</strong></p>
-        <p>GPT-5.4 arrives in three configurations â Standard, Thinking (extended chain-of-thought), and Pro â with a 1 million token context window in the API, record scores on OSWorld-Verified and WebArena computer use benchmarks, and 33% fewer factual errors than GPT-5.2. New GPT-5.4 mini and nano variants target on-device and low-latency deployments, with mini running 2x faster than GPT-5 mini.</p>
+        <p>GPT-5.4 arrives in three configurations — Standard, Thinking (extended chain-of-thought), and Pro — with a 1 million token context window in the API, record scores on OSWorld-Verified and WebArena computer use benchmarks, and 33% fewer factual errors than GPT-5.2. New GPT-5.4 mini and nano variants target on-device and low-latency deployments, with mini running 2x faster than GPT-5 mini.</p>
         <p><a href="https://openai.com/index/introducing-gpt-5-4/">Read more on OpenAI Blog</a></p>
         <p><a href="https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/">Coverage on TechCrunch</a></p>
         <p><a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/">GPT-5.4 mini and nano announcement</a></p>
@@ -56,7 +56,7 @@
     </item>
 
     <item>
-      <title>[#3 TOP STORY] NVIDIA Unveils Vera Rubin Platform at GTC 2026 â 10x Cheaper Inference, 6 New Chips</title>
+      <title>[#3 TOP STORY] NVIDIA Unveils Vera Rubin Platform at GTC 2026 — 10x Cheaper Inference, 6 New Chips</title>
       <link>https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer</link>
       <description><![CDATA[
         <p><strong>Category: Hardware | Infrastructure</strong></p>
@@ -73,16 +73,16 @@
       <category>Top Story</category>
     </item>
 
-    <!-- âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+    <!-- ═══════════════════════════════════════════════════════
          TOOL SPOTLIGHT
-    âââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+    ═══════════════════════════════════════════════════════ -->
 
     <item>
-      <title>[TOOL SPOTLIGHT] Google Gemini "Import Memory" â Switch AI Assistants Without Losing Your Context</title>
+      <title>[TOOL SPOTLIGHT] Google Gemini "Import Memory" — Switch AI Assistants Without Losing Your Context</title>
       <link>https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/</link>
       <description><![CDATA[
         <p><strong>Category: Google | Tool Spotlight</strong></p>
-        <p><strong>Why it matters:</strong> For the first time, users can upload entire ChatGPT or Claude chat histories and personalization data directly into Gemini â turning AI platform switching from a painful fresh start into a seamless migration. This is Google's most aggressive user-acquisition move in the AI wars yet.</p>
+        <p><strong>Why it matters:</strong> For the first time, users can upload entire ChatGPT or Claude chat histories and personalization data directly into Gemini — turning AI platform switching from a painful fresh start into a seamless migration. This is Google's most aggressive user-acquisition move in the AI wars yet.</p>
         <p>Two tools launched March 26: "Add Memory" (imports personalization from rivals) and "Import Chats" (ZIP file upload of full conversation history). Available now in the U.S. Gemini app. Personal Intelligence features (Gmail, Photos, YouTube integration) also now free for all users. Gemini Live on 3.1 also improves context retention to 2x.</p>
         <p><a href="https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/">Read more on TechCrunch</a></p>
         <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/">Full Gemini March Drop on Google Blog</a></p>
@@ -96,12 +96,12 @@
       <category>Tools</category>
     </item>
 
-    <!-- âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+    <!-- ═══════════════════════════════════════════════════════
          QUICK HITS
-    âââââââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+    ═══════════════════════════════════════════════════════ -->
 
     <item>
-      <title>Claude Computer Use Goes Live â AI That Navigates Your Desktop Autonomously</title>
+      <title>Claude Computer Use Goes Live — AI That Navigates Your Desktop Autonomously</title>
       <link>https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html</link>
       <description><![CDATA[
         <p><strong>Category: Anthropic | Agentic Tools</strong></p>
@@ -133,7 +133,7 @@
     </item>
 
     <item>
-      <title>Anthropic Wins Pentagon Lawsuit â Federal Judge Grants Preliminary Injunction</title>
+      <title>Anthropic Wins Pentagon Lawsuit — Federal Judge Grants Preliminary Injunction</title>
       <link>https://www.cnbc.com/2026/03/26/anthropic-pentagon-dod-claude-court-ruling.html</link>
       <description><![CDATA[
         <p><strong>Category: Anthropic | Policy</strong></p>
@@ -149,7 +149,7 @@
     </item>
 
     <item>
-      <title>Microsoft Copilot Leadership Shakeup â Suleyman Freed to Build New Models</title>
+      <title>Microsoft Copilot Leadership Shakeup — Suleyman Freed to Build New Models</title>
       <link>https://www.cnbc.com/2026/03/17/microsoft-copilot-ai-suleyman.html</link>
       <description><![CDATA[
         <p><strong>Category: Microsoft | Copilot</strong></p>
@@ -166,7 +166,7 @@
     </item>
 
     <item>
-      <title>Microsoft Pulls Back Copilot AI Bloat from Windows â "Less Is More" Pivot</title>
+      <title>Microsoft Pulls Back Copilot AI Bloat from Windows — "Less Is More" Pivot</title>
       <link>https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/</link>
       <description><![CDATA[
         <p><strong>Category: Microsoft | Copilot | Tools</strong></p>
@@ -186,7 +186,7 @@
       <link>https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/</link>
       <description><![CDATA[
         <p><strong>Category: Google | Dev Tools</strong></p>
-        <p>Google made Gemini Code Assist â including full VS Code and JetBrains IDE plugins â entirely free for individual developers, dramatically undercutting GitHub Copilot pricing.</p>
+        <p>Google made Gemini Code Assist — including full VS Code and JetBrains IDE plugins — entirely free for individual developers, dramatically undercutting GitHub Copilot pricing.</p>
         <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-updates-march-2026/">Source: Google Blog</a></p>
       ]]></description>
       <pubDate>Thu, 26 Mar 2026 10:00:00 +0000</pubDate>
@@ -198,7 +198,7 @@
     </item>
 
     <item>
-      <title>Gemini AI Agents Now Crawling the Dark Web â 10M Posts/Day Threat Intel</title>
+      <title>Gemini AI Agents Now Crawling the Dark Web — 10M Posts/Day Threat Intel</title>
       <link>https://www.theregister.com/2026/03/23/google_dark_web_ai/</link>
       <description><![CDATA[
         <p><strong>Category: Google | Enterprise</strong></p>
@@ -214,7 +214,7 @@
     </item>
 
     <item>
-      <title>Meta Expanding MTIA Custom Silicon â 4 New Chip Generations in 2 Years</title>
+      <title>Meta Expanding MTIA Custom Silicon — 4 New Chip Generations in 2 Years</title>
       <link>https://about.fb.com/news/2026/03/expanding-metas-custom-silicon-to-power-our-ai-workloads/</link>
       <description><![CDATA[
         <p><strong>Category: Meta | Hardware</strong></p>
@@ -246,7 +246,7 @@
     </item>
 
     <item>
-      <title>Model Context Protocol Crosses 97M Installs â Now the Universal Agentic Standard</title>
+      <title>Model Context Protocol Crosses 97M Installs — Now the Universal Agentic Standard</title>
       <link>https://dev.to/ajay_kumar_1daef5fe089885/ai-developer-tools-enter-autonomous-era-the-rise-of-agentic-systems-in-march-2026-31l0</link>
       <description><![CDATA[
         <p><strong>Category: Tools | Open Source | Agentic</strong></p>
