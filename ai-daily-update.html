@@ -717,6 +717,39 @@
     .container { padding: 20px 16px; }
     .search-input { width: 160px; }
   }
+
+  /* ── THUMBNAILS ──────────────────────────────────────────────── */
+  .card-thumb {
+    margin: -28px -24px 20px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+    background: var(--surface2);
+  }
+  .card-thumb img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.3s ease;
+  }
+  .big-card:hover .card-thumb img { transform: scale(1.04); }
+
+  .spotlight-thumb {
+    width: 100%; height: 200px;
+    border-radius: 8px; overflow: hidden;
+    margin-bottom: 16px; background: var(--surface2);
+  }
+  .spotlight-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .quick-hit { grid-template-columns: 28px 100px 1fr; }
+  .quick-hit-thumb { height: 70px; border-radius: 6px; overflow: hidden; background: var(--surface2); align-self: start; margin-top: 2px; }
+  .quick-hit-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  @media (max-width: 640px) {
+    .quick-hit { grid-template-columns: 28px 70px 1fr; }
+    .quick-hit-thumb { height: 52px; }
+    .card-thumb { height: 140px; }
+    .spotlight-thumb { height: 140px; }
+  }
+
 </style>
 </head>
 <body>
@@ -794,6 +827,7 @@
   <div class="big-three-grid">
 
     <div class="big-card news-item" data-tags="anthropic" data-title="anthropic claude mythos leak cybersecurity step change capabilities">
+      <div class="card-thumb"><img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2261589651.jpg?resize=1200,600" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="big-number">01</div>
       <span class="company-pill pill-anthropic">&#129302; Anthropic</span>
       <h2>Claude "Mythos" Leak Reveals Anthropic's Most Powerful &amp; Riskiest Model Yet</h2>
@@ -802,6 +836,7 @@
     </div>
 
     <div class="big-card news-item" data-tags="nvidia hardware" data-title="nvidia gtc rubin platform chips jensen huang 1 trillion revenue groq">
+      <div class="card-thumb"><img src="https://iprsoftwaremedia.com/219/files/202601/695c3b3b3d63323e2ab85448_nvidia-rubin-platform/nvidia-rubin-platform_f0b2b61b-6d27-4de9-a6d3-d921352e1368-prv.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="big-number">02</div>
       <span class="company-pill pill-nvidia">&#127381; NVIDIA</span>
       <h2>NVIDIA Unveils Rubin Platform at GTC 2026, Jensen Huang Eyes $1 Trillion in AI Chip Revenue</h2>
@@ -810,6 +845,7 @@
     </div>
 
     <div class="big-card news-item" data-tags="policy" data-title="white house national ai policy framework trump regulation state preemption">
+      <div class="card-thumb"><img src="https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="big-number">03</div>
       <span class="company-pill pill-policy">&#127968; Policy</span>
       <h2>White House Releases National AI Legislative Framework, Targeting State-Level Preemption</h2>
@@ -828,6 +864,7 @@
   <div class="spotlight-card news-item" data-tags="tools" data-title="cursor parallel subagents bugbot code review developer tool agentic">
     <div class="spotlight-icon">&#9889;</div>
     <div>
+      <div class="spotlight-thumb"><img src="https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyt47cuevbpamt065olhf.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="spotlight-label">&#128994; Tool Spotlight &mdash; Developer Tools</div>
       <h2>Cursor AI Launches Parallel Subagents &amp; BugBot for Automated PR Reviews</h2>
       <p>Cursor's March 2026 release introduces two headline features: parallel subagents that allow the AI coding assistant to execute discrete subtasks concurrently within a single session, dramatically accelerating complex refactors and multi-file projects; and BugBot, an autonomous code review agent that runs on every pull request, proactively flagging regressions, logic errors, and style violations before a human reviews the diff.</p>
@@ -848,6 +885,8 @@
 
     <div class="quick-hit news-item" data-tags="openai tools" data-title="openai gpt-5.4 1 million context tool search api computer use thinking pro">
       <div class="hit-dot hit-dot-openai"></div>
+      <div class="quick-hit-thumb"><img src="https://image.cnbcfm.com/api/v1/image/108254967-1769009458400-m4yl?w=1200&h=630" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="quick-hit-thumb"><img src="https://techcrunch.com/wp-content/uploads/2026/03/5.4-Thinking_Hero-SEO.png?resize=1200,675" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-openai">OpenAI</span>
@@ -861,6 +900,7 @@
 
     <div class="quick-hit news-item" data-tags="google" data-title="gemini 3.1 pro arc-agi-2 reasoning benchmark gpqa graduate science score">
       <div class="hit-dot hit-dot-google"></div>
+      <div class="quick-hit-thumb"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3_deep-think_meta_dark_Fm70Cou.width-1300.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-google">Google</span>
@@ -873,6 +913,7 @@
 
     <div class="quick-hit news-item" data-tags="google tools" data-title="google gemini chatgpt chat history import switch migrate users rival">
       <div class="hit-dot hit-dot-google"></div>
+      <div class="quick-hit-thumb"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3_deep-think_meta_dark_Fm70Cou.width-1300.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-google">Google</span>
@@ -886,6 +927,7 @@
 
     <div class="quick-hit news-item" data-tags="microsoft enterprise" data-title="microsoft copilot leadership jacob andreou mustafa suleyman reorganize evp">
       <div class="hit-dot hit-dot-microsoft"></div>
+      <div class="quick-hit-thumb"><img src="https://blogs.microsoft.com/wp-content/uploads/2023/11/MSFT-logo-960x540-1.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-microsoft">Microsoft</span>
@@ -899,13 +941,14 @@
 
     <div class="quick-hit news-item" data-tags="meta hardware" data-title="meta mtia custom silicon chips four generations ai ranking recommendation llama">
       <div class="hit-dot hit-dot-meta"></div>
+      <div class="quick-hit-thumb"><img src="https://about.fb.com/wp-content/uploads/2026/03/MTIA_Social-Share.jpg?w=1200" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-meta">Meta</span>
           <span class="quick-hit-tag tag-hardware">Hardware</span>
         </div>
         <h3>Meta Plans Four New MTIA Chip Generations in Two Years to Reduce NVIDIA Reliance</h3>
-        <p>Meta revealed an aggressive custom silicon roadmap, targeting four new generations of its MTIA (Meta Training and Inference Accelerator) chips within 24 months to cut reliance on NVIDIA for ranking, recommendation, and generative AI workloads. The announcement comes alongside news of Llama 4 Scout and Maverick, the company's first open natively multimodal mixture-of-experts models.</p>
+        <p>Meta revealed an aggressive custom silicon roadmap, targeting four new generations of its MTIA (Meta Training and Inference Accelerator) chips within 24 months to cut reliance on NVIDIA for ranking, recommendation, and generative AI workloads. The announcement comes alongside news of Llama 4 Scout and Maverick	the company's first open natively multimodal mixture-of-experts models.</p>
         <a href="https://about.fb.com/news/2026/03/expanding-metas-custom-silicon-to-power-our-ai-workloads/" class="source-link" target="_blank">Meta Newsroom &#8594;</a>
       </div>
     </div>
@@ -925,6 +968,7 @@
 
     <div class="quick-hit news-item" data-tags="policy" data-title="EU AI Act streamline omnibus delay high risk timeline 16 months council">
       <div class="hit-dot hit-dot-policy"></div>
+      <div class="quick-hit-thumb"><img src="https://www.consilium.europa.eu/media/bqvpycs3/ai-pr-2-13032026.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-policy">Policy</span>
@@ -937,6 +981,7 @@
 
     <div class="quick-hit news-item" data-tags="funding" data-title="physical intelligence robotics deepmind researchers 11 billion valuation funding manufacturing">
       <div class="hit-dot hit-dot-funding"></div>
+      <div class="quick-hit-thumb"><img src="https://physicalintelligence.company/images/og/og.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="quick-hit-body">
         <div class="quick-hit-meta">
           <span class="quick-hit-tag tag-funding">Funding</span>
