@@ -5,142 +5,127 @@
     <link>https://georgi-iliev.github.io/ai-daily-update/</link>
     <description>Daily high-signal AI intelligence digest -- The Big Three, new tools, hardware and enterprise adoption.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" rel="self" type="application/rss+xml"/>
-    <managingEditor>AI Daily Update</managingEditor>
-    <webMaster>AI Daily Update</webMaster>
-    <ttl>1440</ttl>
 
-    <!-- BIG THREE: Story 1 -->
     <item>
-      <title>Claude "Mythos" Leak Reveals Anthropic's Most Powerful and Riskiest Model Yet</title>
-      <link>https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/</link>
-      <description>A leaked Anthropic draft blog post unveiled a new model called Claude Mythos, described internally as "a step change" in AI performance and the company's most capable build to date. The leaked documents warn Mythos poses unprecedented cybersecurity risks, potentially enabling rapid automated discovery and exploitation of software vulnerabilities. The model is currently being trialed by select early access customers ahead of an official launch announcement.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <title>Anthropic Accidentally Leaks Claude Code Source -- Confirms Claude Mythos Model</title>
+      <link>https://www.bloomberg.com/news/articles/2026-04-01/anthropic-accidentally-releases-source-code-for-claude-ai-agent</link>
+      <description>Anthropic's npm release of Claude Code accidentally bundled a source map exposing over 500,000 lines of internal TypeScript -- the second such incident this year. The leak forced Anthropic to confirm its most capable unpublished model, Claude Mythos, described as featuring meaningful advances in reasoning, coding, and cybersecurity. A South Korean developer rebuilt the core architecture in Python within hours, publishing "claw-code" on GitHub before sunrise.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>Anthropic</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-anthropic-mythos-leak</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-anthropic-claude-code-leak-mythos</guid>
     </item>
 
-    <!-- BIG THREE: Story 2 -->
     <item>
-      <title>NVIDIA Unveils Rubin Platform at GTC 2026, Jensen Huang Eyes $1 Trillion in AI Chip Revenue</title>
+      <title>NVIDIA Vera Rubin Platform Launches at GTC 2026 With Seven New Chips</title>
       <link>https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer</link>
-      <description>At GTC 2026, NVIDIA CEO Jensen Huang introduced the Vera Rubin next-generation AI platform combining six new chips, a Groq 3 LPU inference processor, and a rack-scale AI supercomputer. The Rubin NVL72 systems deliver 35x higher throughput per megawatt than prior-gen hardware. Huang projected NVIDIA's AI chip portfolio will generate over $1 trillion in cumulative revenue through 2027, cementing the company's commanding position in AI infrastructure.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <description>NVIDIA unveiled the Vera Rubin platform at GTC 2026, delivering a full-stack AI supercomputer with seven chips in full production -- Vera CPU, Rubin GPU, NVLink 6 Switch, ConnectX-9 SuperNIC, BlueField-4 DPU, Spectrum-6 Ethernet switch, and the Groq 3 LPU. The platform promises a 10x reduction in inference token cost and 4x fewer GPUs for MoE model training compared to Blackwell. AWS, Google Cloud, and Microsoft Azure will deploy Rubin-based instances in H2 2026.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>NVIDIA</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-nvidia-rubin-gtc-1-trillion</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-nvidia-vera-rubin-gtc</guid>
     </item>
 
-    <!-- BIG THREE: Story 3 -->
     <item>
-      <title>White House Releases National AI Legislative Framework, Targeting State-Level Preemption</title>
-      <link>https://www.whitehouse.gov/releases/2026/03/president-donald-j-trump-unveils-national-ai-legislative-framework/</link>
-      <description>The Trump administration published its National Policy Framework for Artificial Intelligence on March 20, laying out legislative recommendations that would preempt state AI regulations deemed burdensome to innovation. The framework proposes no new federal AI regulator, directs existing sector agencies, and introduces child safety mandates, data center permitting standards, and energy use guidelines. It is widely seen as a direct challenge to state AI bills already enacted in Colorado, Texas, and California.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
-      <category>Policy</category>
-      <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-white-house-national-ai-framework</guid>
-    </item>
-
-    <!-- TOOL SPOTLIGHT -->
-    <item>
-      <title>Tool Spotlight: Cursor AI Launches Parallel Subagents and BugBot for Automated PR Reviews</title>
-      <link>https://dev.to/ajay_kumar_1daef5fe089885/ai-developer-tools-enter-autonomous-era-the-rise-of-agentic-systems-in-march-2026-31l0</link>
-      <description>Cursor's March 2026 release introduces two headline features: parallel subagents that allow the AI coding assistant to execute discrete subtasks concurrently within a single session, dramatically accelerating complex refactors and multi-file projects; and BugBot, an autonomous code review agent that runs on every pull request, proactively flagging regressions, logic errors, and style violations before a human reviews the diff. Why it matters: parallel execution fundamentally changes the economics of AI-assisted development, pushing coding tools from assistant to genuine autonomous co-developer territory.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
-      <category>Tools</category>
-      <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-cursor-parallel-subagents-bugbot</guid>
-    </item>
-
-    <!-- QUICK HIT 1 -->
-    <item>
-      <title>OpenAI GPT-5.4 Arrives with 1M-Token Context, Tool Search API and Native Computer Use</title>
-      <link>https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/</link>
-      <description>Released March 5, GPT-5.4 brings a 1-million-token context window, a revamped Tool Search system for multi-tool agents, and built-in computer use via the Responses API. Companion models GPT-5.4 mini and nano cover high-volume use cases at lower cost, while GPT-5.4 Thinking and GPT-5.4 Pro offer reasoning-optimized variants for professional work.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <title>OpenAI Releases GPT-5.4 Family With Native Computer-Use and 1M Token Context</title>
+      <link>https://openai.com/index/introducing-gpt-5-4/</link>
+      <description>OpenAI rolled out GPT-5.4, GPT-5.4 mini, and GPT-5.4 nano to the Chat Completions and Responses APIs. GPT-5.4 is the first general-purpose model with native, state-of-the-art computer-use capabilities, enabling agents to operate desktop software and carry out complex multi-app workflows autonomously. The flagship supports up to 1 million tokens of context. GPT-5.4 mini targets high-volume workloads while nano handles simple high-volume tasks at lowest cost.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>OpenAI</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-openai-gpt54-1m-context</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-openai-gpt54-computer-use</guid>
     </item>
 
-    <!-- QUICK HIT 2 -->
     <item>
-      <title>Gemini 3.1 Pro Tops Reasoning Benchmarks with 77.1% ARC-AGI-2 Score</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/</link>
-      <description>Google's Gemini 3.1 Pro launches as the highest-scoring general-purpose AI model on ARC-AGI-2 (77.1%) and GPQA Diamond (94.3% graduate-level science), outpacing both Claude and GPT-5. Critically, Google kept pricing identical to its predecessor, making it a straight upgrade at no extra cost for existing API customers.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <title>GPT-5.4 Computer-Use API -- Tool Spotlight</title>
+      <link>https://openai.com/index/introducing-gpt-5-4/</link>
+      <description>GPT-5.4 introduces native computer-use capabilities directly into OpenAI's APIs. Developers can give agents the ability to observe a screen, click UI elements, type, and execute multi-step workflows across desktop applications without integrating third-party automation layers. Combined with the 1M-token context window, agents can plan, execute, and verify tasks across long operational horizons. This is the first frontier general-purpose model to ship with computer-use baked in, collapsing what previously required separate toolchains into a single API call.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
+      <category>OpenAI</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-openai-gpt54-tool-spotlight</guid>
+    </item>
+
+    <item>
+      <title>Gemini 3 Deep Think Achieves Gold-Medal Results in Science Olympiads</title>
+      <link>https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/</link>
+      <description>Google's Gemini 3 Deep Think upgrade demonstrated gold medal-level performance on the written sections of the 2025 International Physics and Chemistry Olympiads, signaling a step-change in AI scientific reasoning. The specialized reasoning mode is now available across Gemini products and targets research, engineering, and science use cases. DeepMind simultaneously expanded its AI co-scientist access program to all 17 US National Labs.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>Google</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-gemini-31-pro-arc-agi-2</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-google-gemini3-deep-think-olympiad</guid>
     </item>
 
-    <!-- QUICK HIT 3 -->
     <item>
-      <title>Google Gemini Adds ChatGPT Chat Import Tool to Attract Users from Rivals</title>
-      <link>https://www.bloomberg.com/news/articles/2026-03-26/google-gemini-adds-tool-to-make-it-easier-to-switch-from-chatgpt</link>
-      <description>Google rolled out a new import feature letting Gemini users upload zipped chat archives from ChatGPT and other AI providers, preserving conversation context when switching. The feature is available to both free and paid subscribers and is seen as a direct move to reduce friction for users considering migrating away from OpenAI.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
-      <category>Google</category>
-      <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-gemini-chatgpt-import</guid>
-    </item>
-
-    <!-- QUICK HIT 4 -->
-    <item>
-      <title>Microsoft Unifies Copilot Under New EVP Jacob Andreou in Major Leadership Shake-Up</title>
+      <title>Microsoft Unifies Copilot Under New Leadership; Suleyman Pivots to Superintelligence</title>
       <link>https://blogs.microsoft.com/blog/2026/03/17/announcing-copilot-leadership-update/</link>
-      <description>On March 17, Microsoft announced a sweeping reorganization of its Copilot strategy, promoting Jacob Andreou to Executive Vice President, Copilot, reporting directly to CEO Satya Nadella. Consumer and commercial Copilot efforts are now unified under one team, while Mustafa Suleyman's mandate shifts to frontier AI research with a five-year superintelligence horizon. Separately, Microsoft launched the Azure Copilot Migration Agent to automate cloud migration planning.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <description>Microsoft consolidated consumer and commercial Copilot operations under a single team on March 17, elevating Jacob Andreou to EVP of Copilot. Mustafa Suleyman pivots to a five-year mission building frontier superintelligence models. The Azure Copilot migration agent, now in public preview, embeds AI across discovery, assessment, planning, and deployment to dramatically reduce enterprise modernization timelines.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>Microsoft</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-microsoft-copilot-leadership-andreou</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-microsoft-copilot-leadership-suleyman</guid>
     </item>
 
-    <!-- QUICK HIT 5 -->
     <item>
-      <title>Meta Plans Four New MTIA Chip Generations in Two Years to Reduce NVIDIA Reliance</title>
-      <link>https://about.fb.com/news/2026/03/expanding-metas-custom-silicon-to-power-our-ai-workloads/</link>
-      <description>Meta revealed an aggressive custom silicon roadmap, targeting four new generations of its MTIA (Meta Training and Inference Accelerator) chips within 24 months to cut reliance on NVIDIA for ranking, recommendation, and generative AI workloads. The announcement comes alongside news of Llama 4 Scout and Maverick, the company's first open natively multimodal mixture-of-experts models.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <title>Meta Previews LlamaCon (Apr 29) -- Llama 4 Scout and Maverick Available Now</title>
+      <link>https://ai.meta.com/blog/llamacon-llama-news/</link>
+      <description>Meta's Llama 4 Scout and Maverick are the first open-weight natively multimodal models built on a mixture-of-experts architecture with unprecedented context length. Maverick outperforms GPT-4o and Gemini 2.0 on image-text benchmarks. LlamaCon on April 29 will feature Llama 4 Behemoth, described as one of the smartest LLMs in the world and serving as a teacher model for the Llama 4 family.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>Meta</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-meta-mtia-four-chip-generations</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-meta-llamacon-llama4</guid>
     </item>
 
-    <!-- QUICK HIT 6 -->
     <item>
-      <title>OpenAI Raises Additional $10B, Pushing Record Funding Round to $120B Total</title>
-      <link>https://www.cnbc.com/2026/03/24/openai-secures-an-extra-10-billion-in-record-funding-round-cfo-friar-says.html</link>
-      <description>OpenAI secured another $10 billion in March, extending its already record-breaking $110 billion round from February to "north of $120 billion," per the company's CFO. The fresh capital accelerates data center build-out and compute investments as OpenAI competes with rivals Anthropic (recently valued at $380B) and xAI.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
-      <category>OpenAI</category>
+      <title>Claude Haiku 4.5 Launches -- Near-Frontier Performance at Real-Time Speeds</title>
+      <link>https://www.anthropic.com/news</link>
+      <description>Anthropic officially launched Claude Haiku 4.5, its fastest and most intelligent Haiku-class model, designed for real-time applications and cost-sensitive deployments. The model delivers near-frontier performance on reasoning and coding tasks while maintaining low latency. Haiku 4.5 is available immediately via the Anthropic API and claude.ai.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
+      <category>Anthropic</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-openai-120b-funding-round</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-anthropic-claude-haiku-45</guid>
     </item>
 
-    <!-- QUICK HIT 7 -->
     <item>
-      <title>EU Streamlines AI Act, Delays High-Risk AI Rules by Up to 16 Months</title>
-      <link>https://www.consilium.europa.eu/en/press/press-releases/2026/03/13/council-agrees-position-to-streamline-rules-on-artificial-intelligence/</link>
-      <description>The EU Council agreed on March 13 to adjust the timeline for applying the AI Act's high-risk AI system rules by up to 16 months, contingent on the European Commission confirming that required standards and implementation tools are in place. The amendment is part of the "Omnibus VII" simplification package and reflects industry pressure to avoid compliance burdens before the regulatory toolkit is complete.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <title>Trump Administration Releases Six-Pronged National AI Policy Framework</title>
+      <link>https://www.cnbc.com/2026/03/20/trump-ai-policy-framework.html</link>
+      <description>The White House unveiled a comprehensive national AI regulatory framework proposing a single federal standard that preempts state-level fragmentation. Key pillars include child-safety rules for AI products, standardized permitting for AI data centers, and IP protections. The administration is seeking bipartisan Congressional support to codify it into law in 2026. Colorado's AI Act and California's AI Transparency Act are both now in effect.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
       <category>Policy</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-eu-ai-act-delay-16-months</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-trump-national-ai-policy-framework</guid>
     </item>
 
-    <!-- QUICK HIT 8 -->
     <item>
-      <title>Ex-DeepMind Robotics Startup Physical Intelligence in Talks for $11B Valuation</title>
-      <link>https://www.bloomberg.com/news/articles/2026-03-27/ex-deepmind-staffers-robotics-startup-in-talks-for-11-billion-valuation</link>
-      <description>Physical Intelligence, founded two years ago by former Google DeepMind researchers and AI academics, is in advanced discussions for a new approximately $1 billion funding round at an $11 billion valuation. The company is building general-purpose foundation models for physical robots and has attracted significant enterprise interest from manufacturing and logistics sectors.</description>
-      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
-      <category>Funding</category>
+      <title>OpenAI's $110B Round Leads Unprecedented AI Funding Wave in Early 2026</title>
+      <link>https://techcrunch.com/2026/03/20/ai-startups-are-eating-the-venture-industry-and-the-returns-so-far-are-good/</link>
+      <description>OpenAI's February 2026 $110 billion raise remains the largest private venture deal in history. Anthropic followed with a $30 billion Series G at a $380 billion post-money valuation, while xAI announced a $20 billion round in January. Together just three AI companies absorbed 83% of all global venture capital in February 2026, signaling extreme concentration in the AI funding market.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
+      <category>OpenAI</category>
       <dc:creator>AI Daily Update</dc:creator>
-      <guid isPermaLink="false">ai-daily-update-2026-03-30-physical-intelligence-11b-valuation</guid>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-openai-110b-funding-wave</guid>
+    </item>
+
+    <item>
+      <title>Legora Closes $550M Series D at $5.55B for Collaborative Legal AI</title>
+      <link>https://aifundingtracker.com/ai-startup-funding-news-today/</link>
+      <description>Legora, a collaborative AI platform for legal professionals, completed a $550 million Series D, valuing the company at $5.55 billion. The raise reflects surging enterprise demand for AI systems that can handle complex, high-stakes professional workflows. Household robotics startup Sunday also hit unicorn status with a $165M Series B, targeting real-world pilot customer deliveries by late 2026.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
+      <category>Enterprise</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-legora-550m-series-d-legal-ai</guid>
+    </item>
+
+    <item>
+      <title>RSAC 2026: Agentic AI Security Dominates -- Okta Unveils Agent Kill Switch Framework</title>
+      <link>https://kenhuangus.substack.com/p/securing-agentic-ai-rsac-2026s-top</link>
+      <description>At RSAC 2026, securing agentic AI pipelines was the dominant conversation. Okta unveiled its Secure Agentic Enterprise Framework, featuring an agent registry with identity-federation-based discovery and a universal kill switch propagated via Okta AI Agents. Gartner predicts that over 40% of enterprise applications will embed role-specific AI agents by 2026, making governance infrastructure critical today.</description>
+      <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
+      <category>Enterprise</category>
+      <dc:creator>AI Daily Update</dc:creator>
+      <guid isPermaLink="false">ai-daily-update-2026-04-01-rsac-agentic-ai-security-okta</guid>
     </item>
 
   </channel>
