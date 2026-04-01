@@ -1,598 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Daily Update — April 1, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0a0c10;
-    --surface: #111318;
-    --surface2: #1a1d26;
-    --border: #252833;
-    --accent: #6c63ff;
-    --accent2: #00d4b4;
-    --accent3: #ff6b6b;
-    --accent4: #ffd166;
-    --text: #e8eaf0;
-    --text-muted: #8891a8;
-    --radius: 12px;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; }
-  a { color: var(--accent2); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Daily Update &mdash; April 1, 2026</title>
+  <link rel="alternate" type="application/rss+xml" title="AI Daily Update RSS" href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" />
+  <style>
+    :root {
+      --bg: #0a0c10;
+      --surface: #111318;
+      --surface2: #1a1d27;
+      --border: #1e2231;
+      --accent: #6c63ff;
+      --accent2: #00d4b4;
+      --accent3: #ff6b6b;
+      --accent4: #ffd166;
+      --accent5: #56cffa;
+      --text: #e2e8f0;
+      --text-muted: #8892a4;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; line-height: 1.6; }
 
-  /* STICKY TOP BAR */
-  .topbar {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(10,12,16,0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 24px; height: 56px;
-  }
-  .topbar-left { display: flex; align-items: center; gap: 16px; }
-  .topbar-brand { font-weight: 800; font-size: 16px; letter-spacing: -0.3px; }
-  .topbar-brand span { color: var(--accent); }
-  .live-badge {
-    display: flex; align-items: center; gap: 6px;
-    background: rgba(108,99,255,0.15); border: 1px solid rgba(108,99,255,0.3);
-    color: var(--accent); padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 600;
-  }
-  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-  .date-label { color: var(--text-muted); font-size: 13px; }
-  .topbar-right { display: flex; gap: 8px; }
-  .btn-sm {
-    display: flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s;
-  }
-  .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text-muted); }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-  .btn-accent { background: var(--accent); color: #fff; }
-  .btn-accent:hover { opacity: 0.85; }
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,12,16,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 56px;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 12px; }
+    .topbar-logo { font-size: 17px; font-weight: 700; letter-spacing: -0.3px; }
+    .topbar-logo span { color: var(--accent); }
+    .live-badge {
+      background: var(--accent3); color: #fff;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 3px 8px; border-radius: 4px; text-transform: uppercase;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
+    .topbar-date { color: var(--text-muted); font-size: 13px; }
+    .topbar-right { display: flex; gap: 8px; }
+    .btn-sm {
+      background: var(--surface2); border: 1px solid var(--border);
+      color: var(--text-muted); font-size: 12px; padding: 6px 12px;
+      border-radius: 6px; cursor: pointer; transition: all .2s;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+    }
+    .btn-sm:hover { background: var(--surface); color: var(--text); border-color: var(--accent); }
 
-  /* LAYOUT */
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
-  /* STATS ROW */
-  .stats-row {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
-    padding: 20px 0 8px;
-  }
-  .stat-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 16px 20px;
-  }
-  .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 6px; }
-  .stat-value { font-size: 22px; font-weight: 800; }
-  .stat-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-  .c-accent { color: var(--accent); }
-  .c-accent2 { color: var(--accent2); }
-  .c-accent3 { color: var(--accent3); }
-  .c-accent4 { color: var(--accent4); }
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      padding: 20px 0;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px 20px;
+    }
+    .stat-label { font-size: 11px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+    .stat-value { font-size: 26px; font-weight: 700; line-height: 1; }
+    .stat-value.accent  { color: var(--accent); }
+    .stat-value.accent2 { color: var(--accent2); }
+    .stat-value.accent4 { color: var(--accent4); }
+    .stat-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
 
-  /* FILTER BAR */
-  .filter-bar {
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    padding: 16px 0 8px;
-    border-top: 1px solid var(--border);
-    margin-top: 12px;
-  }
-  .filter-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-right: 4px; }
-  .filter-pill {
-    padding: 5px 14px; border-radius: 999px; border: 1px solid var(--border);
-    font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-muted);
-  }
-  .filter-pill:hover, .filter-pill.active { border-color: var(--accent); color: var(--accent); background: rgba(108,99,255,0.1); }
-  .filter-pill.active { background: rgba(108,99,255,0.15); }
-  .search-input {
-    margin-left: auto; background: var(--surface); border: 1px solid var(--border); color: var(--text);
-    padding: 6px 14px; border-radius: 8px; font-size: 13px; font-family: inherit; min-width: 220px; outline: none;
-  }
-  .search-input:focus { border-color: var(--accent); }
-  .search-input::placeholder { color: var(--text-muted); }
+    .filter-bar {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+      padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .filter-label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .6px; margin-right: 4px; }
+    .pill {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-muted); font-size: 12px; font-weight: 600;
+      padding: 5px 13px; border-radius: 20px; cursor: pointer;
+      transition: all .18s; user-select: none;
+    }
+    .pill:hover { border-color: var(--accent); color: var(--text); }
+    .pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .pill.openai.active    { background: #19c37d; border-color: #19c37d; }
+    .pill.anthropic.active { background: #c87137; border-color: #c87137; }
+    .pill.google.active    { background: #4285f4; border-color: #4285f4; }
+    .pill.meta.active      { background: #0668e1; border-color: #0668e1; }
+    .pill.microsoft.active { background: #00a4ef; border-color: #00a4ef; }
+    .pill.nvidia.active    { background: #76b900; border-color: #76b900; }
+    .search-input {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); font-size: 13px; padding: 6px 14px; border-radius: 20px;
+      outline: none; width: 200px; margin-left: auto; transition: border-color .2s;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-input:focus { border-color: var(--accent); }
 
-  /* SECTION HEADERS */
-  .section-header { display: flex; align-items: center; gap: 12px; margin: 32px 0 16px; }
-  .section-title { font-size: 18px; font-weight: 800; }
-  .section-line { flex: 1; height: 1px; background: var(--border); }
-  .section-count { font-size: 12px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); padding: 2px 10px; border-radius: 999px; }
+    .section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* BIG THREE */
-  .big-three-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .big-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 24px; position: relative; overflow: hidden; transition: transform 0.2s, border-color 0.2s;
-  }
-  .big-card:hover { transform: translateY(-2px); border-color: rgba(108,99,255,0.4); }
-  .big-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-  .big-card.c1::before { background: var(--accent3); }
-  .big-card.c2::before { background: var(--accent); }
-  .big-card.c3::before { background: var(--accent4); }
-  .card-num {
-    position: absolute; right: 20px; top: 16px;
-    font-size: 64px; font-weight: 900; opacity: 0.06; line-height: 1;
-    color: var(--text); pointer-events: none;
-  }
-  .company-pill {
-    display: inline-block; padding: 3px 10px; border-radius: 999px;
-    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;
-  }
-  .pill-anthropic { background: rgba(255,107,107,0.15); color: var(--accent3); border: 1px solid rgba(255,107,107,0.25); }
-  .pill-nvidia { background: rgba(0,212,180,0.12); color: var(--accent2); border: 1px solid rgba(0,212,180,0.2); }
-  .pill-openai { background: rgba(108,99,255,0.12); color: var(--accent); border: 1px solid rgba(108,99,255,0.2); }
-  .pill-google { background: rgba(255,209,102,0.12); color: var(--accent4); border: 1px solid rgba(255,209,102,0.2); }
-  .pill-meta { background: rgba(0,212,180,0.1); color: #5bb8ff; border: 1px solid rgba(91,184,255,0.2); }
-  .pill-microsoft { background: rgba(0,212,180,0.1); color: var(--accent2); border: 1px solid rgba(0,212,180,0.2); }
-  .pill-policy { background: rgba(255,107,107,0.1); color: #ff9a6c; border: 1px solid rgba(255,154,108,0.2); }
-  .pill-security { background: rgba(108,99,255,0.12); color: var(--accent); border: 1px solid rgba(108,99,255,0.2); }
-  .card-headline { font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 10px; }
-  .card-summary { font-size: 13px; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px; }
-  .card-link { font-size: 12px; font-weight: 600; color: var(--accent2); display: inline-flex; align-items: center; gap: 4px; }
-  .card-link:hover { text-decoration: none; opacity: 0.8; }
+    .big-three { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px; }
+    .big-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 22px;
+      position: relative; overflow: hidden;
+      transition: transform .2s, border-color .2s;
+    }
+    .big-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .big-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+    .big-card:nth-child(1)::before { background: var(--accent3); }
+    .big-card:nth-child(2)::before { background: var(--accent); }
+    .big-card:nth-child(3)::before { background: var(--accent2); }
+    .big-number {
+      font-size: 72px; font-weight: 900; line-height: 1;
+      color: rgba(255,255,255,0.03);
+      position: absolute; bottom: 10px; right: 16px;
+    }
+    .tag-pill {
+      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .5px;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 4px; margin-bottom: 12px;
+    }
+    .tag-openai    { background: rgba(25,195,125,.15);  color: #19c37d; }
+    .tag-anthropic { background: rgba(200,113,55,.15);  color: #c87137; }
+    .tag-google    { background: rgba(66,133,244,.15);  color: #4285f4; }
+    .tag-meta      { background: rgba(6,104,225,.15);   color: #4b9cf0; }
+    .tag-microsoft { background: rgba(0,164,239,.15);   color: #00a4ef; }
+    .tag-nvidia    { background: rgba(118,185,0,.15);   color: #76b900; }
+    .tag-funding   { background: rgba(108,99,255,.15);  color: var(--accent); }
+    .tag-policy    { background: rgba(255,107,107,.15); color: var(--accent3); }
+    .tag-enterprise{ background: rgba(255,209,102,.15); color: var(--accent4); }
+    .tag-tools     { background: rgba(0,212,180,.15);   color: var(--accent2); }
+    .tag-hardware  { background: rgba(86,207,250,.15);  color: var(--accent5); }
+    .big-headline { font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 10px; }
+    .big-summary  { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+    .source-link  { font-size: 12px; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+    .source-link:hover { text-decoration: underline; }
 
-  /* TOOL SPOTLIGHT */
-  .spotlight-card {
-    background: linear-gradient(135deg, rgba(108,99,255,0.12) 0%, rgba(0,212,180,0.08) 100%);
-    border: 1px solid rgba(108,99,255,0.25); border-radius: var(--radius); padding: 28px 32px;
-    display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start;
-  }
-  .spotlight-icon {
-    width: 56px; height: 56px; border-radius: 14px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0;
-  }
-  .spotlight-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
-  .spotlight-name { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
-  .spotlight-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; margin-bottom: 14px; }
-  .why-matters {
-    background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.2);
-    border-radius: 8px; padding: 12px 16px; font-size: 13px;
-  }
-  .why-matters strong { color: var(--accent); }
+    .spotlight {
+      background: linear-gradient(135deg, #111318 0%, #1a1527 50%, #111318 100%);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius); padding: 28px 32px;
+      display: grid; grid-template-columns: 56px 1fr; gap: 20px;
+      align-items: start; margin-bottom: 40px;
+      position: relative; overflow: hidden;
+    }
+    .spotlight::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(108,99,255,.15) 0%, transparent 70%);
+    }
+    .spotlight-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+    }
+    .spotlight-tag { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .spotlight-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .spotlight-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+    .spotlight-callout {
+      background: rgba(0,212,180,.08); border-left: 3px solid var(--accent2);
+      padding: 10px 14px; border-radius: 0 6px 6px 0;
+      font-size: 13px; color: var(--text); font-style: italic; margin-bottom: 12px;
+    }
 
-  /* QUICK HITS */
-  .quick-hits-list { display: flex; flex-direction: column; gap: 2px; }
-  .quick-hit {
-    display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: start;
-    padding: 16px 20px; border-radius: var(--radius); border: 1px solid transparent;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .quick-hit:hover { background: var(--surface); border-color: var(--border); }
-  .qh-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
-  .qh-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-  .qh-summary { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-  .qh-link { font-size: 12px; color: var(--accent2); font-weight: 600; white-space: nowrap; margin-top: 4px; }
+    .quick-hits { margin-bottom: 40px; }
+    .quick-item {
+      display: grid; grid-template-columns: 20px 1fr; gap: 14px;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .quick-item:last-child { border-bottom: none; }
+    .quick-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .quick-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .quick-meta { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 5px; }
+    .quick-link { font-size: 11px; color: var(--accent); text-decoration: none; }
+    .quick-link:hover { text-decoration: underline; }
 
-  /* PRIMARY SOURCES */
-  .sources-row { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 0 4px; }
-  .source-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 7px 16px; border-radius: 8px; border: 1px solid var(--border);
-    font-size: 12px; font-weight: 600; color: var(--text-muted);
-    background: var(--surface); text-decoration: none; transition: all 0.2s;
-  }
-  .source-btn:hover { border-color: var(--accent2); color: var(--accent2); background: rgba(0,212,180,0.06); }
+    .sources-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    .source-btn {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-muted); font-size: 12px; font-weight: 600;
+      padding: 8px 16px; border-radius: 8px; text-decoration: none;
+      transition: all .18s; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .source-btn:hover { border-color: var(--accent2); color: var(--accent2); }
 
-  /* FOOTER */
-  footer {
-    margin-top: 48px; border-top: 1px solid var(--border);
-    padding: 24px 0 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-  }
-  .footer-left { font-size: 13px; color: var(--text-muted); }
-  .footer-links { display: flex; gap: 16px; }
-  .footer-link { font-size: 12px; color: var(--text-muted); cursor: pointer; transition: color 0.2s; background: none; border: none; font-family: inherit; }
-  .footer-link:hover { color: var(--accent); }
+    footer {
+      border-top: 1px solid var(--border); padding: 28px 0;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-left { font-size: 13px; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-link { font-size: 12px; color: var(--text-muted); text-decoration: none; transition: color .18s; }
+    .footer-link:hover { color: var(--accent); }
 
-  /* NO RESULTS */
-  .no-results { display: none; text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; }
-  .no-results.show { display: block; }
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,.7); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px; width: 560px; max-width: 95vw;
+      max-height: 80vh; overflow-y: auto;
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .modal-title { font-size: 17px; font-weight: 700; }
+    .modal-close { background: none; border: none; color: var(--text-muted); font-size: 22px; cursor: pointer; }
+    .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+    .tab { font-size: 12px; font-weight: 600; color: var(--text-muted); padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .18s; }
+    .tab.active { color: var(--accent); border-color: var(--accent); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .code-block {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 12px;
+      color: var(--accent2); white-space: pre-wrap; word-break: break-all; line-height: 1.5;
+    }
+    .no-results { display: none; padding: 32px; text-align: center; color: var(--text-muted); font-size: 14px; }
 
-  /* MODAL */
-  .modal-overlay {
-    display: none; position: fixed; inset: 0; z-index: 999;
-    background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
-    align-items: center; justify-content: center;
-  }
-  .modal-overlay.show { display: flex; }
-  .modal {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-    width: 600px; max-width: 95vw; max-height: 85vh; overflow: hidden;
-    display: flex; flex-direction: column;
-  }
-  .modal-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 24px; border-bottom: 1px solid var(--border);
-  }
-  .modal-title { font-size: 16px; font-weight: 700; }
-  .modal-close { background: none; border: none; color: var(--text-muted); font-size: 20px; cursor: pointer; padding: 4px; line-height: 1; }
-  .modal-close:hover { color: var(--text); }
-  .modal-tabs { display: flex; border-bottom: 1px solid var(--border); padding: 0 24px; gap: 4px; }
-  .modal-tab {
-    padding: 12px 16px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; background: none;
-    color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s;
-  }
-  .modal-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .modal-body { padding: 24px; overflow-y: auto; flex: 1; }
-  .modal-body pre {
-    background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
-    padding: 16px; font-size: 12px; line-height: 1.6; overflow-x: auto;
-    color: var(--text-muted); font-family: 'Courier New', monospace;
-    white-space: pre-wrap; word-break: break-all;
-  }
-  .copy-btn {
-    display: block; margin-top: 12px; padding: 8px 18px; border-radius: 8px;
-    background: var(--accent); color: #fff; font-size: 12px; font-weight: 700;
-    border: none; cursor: pointer;
-  }
-  .copy-btn:hover { opacity: 0.85; }
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
-
-  @media (max-width: 900px) {
-    .big-three-grid { grid-template-columns: 1fr; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .spotlight-card { grid-template-columns: 1fr; }
-    .topbar-right { display: none; }
-  }
-</style>
+    @media (max-width: 900px) {
+      .big-three { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 600px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .topbar-date { display: none; }
+      .spotlight { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- STICKY TOP BAR -->
-<div class="topbar">
+<header class="topbar">
   <div class="topbar-left">
-    <div class="topbar-brand"><span>AI</span> Daily Update</div>
-    <div class="live-badge"><span class="live-dot"></span> LIVE</div>
-    <span class="date-label">Wednesday, April 1, 2026</span>
+    <div class="topbar-logo">AI <span>Daily</span> Update</div>
+    <span class="live-badge">Live</span>
+    <span class="topbar-date">Wednesday, April 1, 2026</span>
   </div>
   <div class="topbar-right">
-    <button class="btn-sm btn-outline" onclick="document.getElementById('embedModal').classList.add('show')">
-      &lt;/&gt; Embed
-    </button>
-    <a href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" class="btn-sm btn-outline" target="_blank">
-      &#9642; RSS
-    </a>
-    <a href="https://georgi-iliev.github.io/ai-daily-update/" class="btn-sm btn-accent" target="_blank">
-      &#127760; Live Site
-    </a>
+    <a href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" class="btn-sm" target="_blank">&#9656; RSS</a>
+    <button class="btn-sm" onclick="openModal()">&#60;/&#62; Embed</button>
   </div>
-</div>
+</header>
 
-<!-- MAIN CONTENT -->
-<div class="container">
+<main class="container">
 
-  <!-- STATS ROW -->
   <div class="stats-row">
     <div class="stat-card">
       <div class="stat-label">Stories Today</div>
-      <div class="stat-value c-accent">11</div>
-      <div class="stat-sub">Curated high-signal</div>
+      <div class="stat-value accent">11</div>
+      <div class="stat-sub">Including 3 Big Three + 1 Spotlight</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Companies Tracked</div>
-      <div class="stat-value c-accent2">8</div>
-      <div class="stat-sub">OpenAI · Google · Anthropic · NVIDIA +4</div>
+      <div class="stat-value accent2">6</div>
+      <div class="stat-sub">OpenAI &middot; Google &middot; Anthropic &middot; Meta &middot; MSFT &middot; NVIDIA</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Tool Spotlight</div>
-      <div class="stat-value c-accent4" style="font-size:15px;padding-top:4px;">GPT-5.4 CU</div>
-      <div class="stat-sub">Computer-use API by OpenAI</div>
+      <div class="stat-value" style="font-size:18px; font-weight:700; margin-top:2px;">GPT-5.4 nano</div>
+      <div class="stat-sub">$0.20 / 1M input tokens &mdash; API-only</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Top Signal</div>
-      <div class="stat-value c-accent3" style="font-size:14px;padding-top:4px;">Anthropic Leak</div>
-      <div class="stat-sub">Claude Mythos confirmed via accidental source release</div>
+      <div class="stat-value accent4" style="font-size:20px; font-weight:700; margin-top:2px;">$122B</div>
+      <div class="stat-sub">OpenAI closes largest round in history</div>
     </div>
   </div>
 
-  <!-- FILTER BAR -->
   <div class="filter-bar">
     <span class="filter-label">Filter:</span>
-    <button class="filter-pill active" onclick="filterPill(this,'all')">All</button>
-    <button class="filter-pill" onclick="filterPill(this,'openai')">OpenAI</button>
-    <button class="filter-pill" onclick="filterPill(this,'anthropic')">Anthropic</button>
-    <button class="filter-pill" onclick="filterPill(this,'google')">Google</button>
-    <button class="filter-pill" onclick="filterPill(this,'meta')">Meta</button>
-    <button class="filter-pill" onclick="filterPill(this,'microsoft')">Microsoft</button>
-    <button class="filter-pill" onclick="filterPill(this,'nvidia')">NVIDIA</button>
-    <button class="filter-pill" onclick="filterPill(this,'tools')">Tools</button>
-    <button class="filter-pill" onclick="filterPill(this,'hardware')">Hardware</button>
-    <button class="filter-pill" onclick="filterPill(this,'enterprise')">Enterprise</button>
-    <button class="filter-pill" onclick="filterPill(this,'policy')">Policy</button>
-    <button class="filter-pill" onclick="filterPill(this,'funding')">Funding</button>
-    <input class="search-input" type="text" placeholder="Search stories..." id="searchInput" oninput="doSearch(this.value)">
+    <span class="pill openai"    data-filter="openai"    onclick="toggleFilter(this)">OpenAI</span>
+    <span class="pill anthropic" data-filter="anthropic" onclick="toggleFilter(this)">Anthropic</span>
+    <span class="pill google"    data-filter="google"    onclick="toggleFilter(this)">Google</span>
+    <span class="pill meta"      data-filter="meta"      onclick="toggleFilter(this)">Meta</span>
+    <span class="pill microsoft" data-filter="microsoft" onclick="toggleFilter(this)">Microsoft</span>
+    <span class="pill nvidia"    data-filter="nvidia"    onclick="toggleFilter(this)">NVIDIA</span>
+    <span class="pill" data-filter="tools"      onclick="toggleFilter(this)">Tools</span>
+    <span class="pill" data-filter="hardware"   onclick="toggleFilter(this)">Hardware</span>
+    <span class="pill" data-filter="enterprise" onclick="toggleFilter(this)">Enterprise</span>
+    <span class="pill" data-filter="policy"     onclick="toggleFilter(this)">Policy</span>
+    <span class="pill" data-filter="funding"    onclick="toggleFilter(this)" style="border-color:rgba(255,107,107,.4); color:var(--accent3);">Funding</span>
+    <input class="search-input" id="searchInput" type="text" placeholder="Search stories..." oninput="doSearch(this.value)" />
   </div>
 
-  <!-- BIG THREE -->
-  <div class="section-header">
-    <span class="section-title">&#9889; The Big Three</span>
-    <div class="section-line"></div>
-    <span class="section-count">3 stories</span>
-  </div>
+  <div class="section-title">&#9889; The Big Three</div>
+  <div class="big-three" id="bigThree">
 
-  <div class="big-three-grid" id="bigThreeGrid">
-
-    <div class="big-card c1 news-item" data-tags="anthropic tools" data-title="anthropic accidentally leaks claude code source exposes claude mythos">
-      <div class="card-num">01</div>
-      <span class="company-pill pill-anthropic">Anthropic</span>
-      <div class="card-headline">Anthropic Accidentally Leaks Claude Code Source &mdash; Confirms Claude Mythos Model</div>
-      <div class="card-summary">Anthropic's npm release of Claude Code accidentally bundled a source map exposing over 500,000 lines of internal TypeScript &mdash; the second such incident this year. The leak forced Anthropic to confirm its most capable unpublished model, Claude Mythos, described as featuring "meaningful advances in reasoning, coding, and cybersecurity." A South Korean developer rebuilt the core architecture in Python within hours, publishing "claw-code" on GitHub before sunrise.</div>
-      <a class="card-link" href="https://www.bloomberg.com/news/articles/2026-04-01/anthropic-accidentally-releases-source-code-for-claude-ai-agent" target="_blank">Read on Bloomberg &#8594;</a>
+    <div class="big-card news-item" data-tags="openai funding" data-title="OpenAI Closes 122 Billion Funding Round at 852 Billion Valuation">
+      <span class="tag-pill tag-openai">OpenAI &middot; Funding</span>
+      <div class="big-headline">OpenAI Closes $122 Billion Round &mdash; Now Valued at $852 Billion</div>
+      <div class="big-summary">OpenAI has closed the largest private funding round in history at $122 billion, pushing its valuation to $852 billion. The raise marks a staggering acceleration of AI investment and positions OpenAI as the most valuable startup ever, ahead of its anticipated IPO. The funding will accelerate compute infrastructure buildout, agent platform development, and international expansion.</div>
+      <a class="source-link" href="https://startupnews.fyi/2026/04/01/openai-raises-122-billion-in-boosted-funding-round-2/" target="_blank">&#8599; startupnews.fyi</a>
+      <div class="big-number">01</div>
     </div>
 
-    <div class="big-card c2 news-item" data-tags="nvidia hardware" data-title="nvidia vera rubin platform gtc 2026 seven chips agentic ai">
-      <div class="card-num">02</div>
-      <span class="company-pill pill-nvidia">NVIDIA</span>
-      <div class="card-headline">NVIDIA Vera Rubin Platform Launches at GTC 2026 With Seven New Chips</div>
-      <div class="card-summary">NVIDIA unveiled the Vera Rubin platform at GTC 2026, delivering a full-stack AI supercomputer with seven chips in full production. The platform promises a 10x reduction in inference token cost and 4x fewer GPUs for MoE model training vs. Blackwell. AWS, Google Cloud, and Microsoft Azure are among the first cloud providers set to offer Rubin-based instances in H2 2026.</div>
-      <a class="card-link" href="https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer" target="_blank">Read on NVIDIA Newsroom &#8594;</a>
+    <div class="big-card news-item" data-tags="nvidia hardware" data-title="NVIDIA Secures 1 Trillion in Orders for Vera Rubin at GTC 2026">
+      <span class="tag-pill tag-nvidia">NVIDIA &middot; Hardware</span>
+      <div class="big-headline">NVIDIA Locks $1 Trillion in Orders for Vera Rubin AI Platform</div>
+      <div class="big-summary">At GTC 2026, CEO Jensen Huang revealed NVIDIA has secured $1 trillion in combined orders for Blackwell and Vera Rubin chip architectures through the end of 2027. The Vera Rubin platform features seven chips and a flagship NVL72 rack delivering 10x performance-per-watt over Grace Blackwell, set to ship in the second half of 2026. It represents NVIDIA's full-stack bet on the agentic AI era.</div>
+      <a class="source-link" href="https://www.cnbc.com/2026/03/16/nvidia-gtc-2026-ceo-jensen-huang-keynote-blackwell-vera-rubin.html" target="_blank">&#8599; cnbc.com</a>
+      <div class="big-number">02</div>
     </div>
 
-    <div class="big-card c3 news-item" data-tags="openai tools" data-title="openai gpt-5.4 computer use api 1 million context">
-      <div class="card-num">03</div>
-      <span class="company-pill pill-openai">OpenAI</span>
-      <div class="card-headline">OpenAI Releases GPT-5.4 Family With Native Computer-Use and 1M Token Context</div>
-      <div class="card-summary">OpenAI rolled out GPT-5.4, GPT-5.4 mini, and GPT-5.4 nano to the Chat Completions and Responses APIs. GPT-5.4 is the first general-purpose model with native computer-use capabilities, enabling agents to operate desktop software and carry out complex multi-app workflows autonomously. The flagship supports up to 1 million tokens of context.</div>
-      <a class="card-link" href="https://openai.com/index/introducing-gpt-5-4/" target="_blank">Read on OpenAI &#8594;</a>
+    <div class="big-card news-item" data-tags="anthropic" data-title="Anthropic Scrambles to Contain Claude Code Source Code Leak">
+      <span class="tag-pill tag-anthropic">Anthropic &middot; Security</span>
+      <div class="big-headline">Anthropic Scrambles to Address Claude Code Source Code Leak</div>
+      <div class="big-summary">Bloomberg reports that Anthropic is moving urgently to contain a leak of Claude Code source code, raising questions about internal security practices at one of the world's leading AI safety companies. The incident draws scrutiny given Anthropic's mission to develop safe AI and adds pressure to its security protocols. The company has not yet confirmed the full scope of the breach.</div>
+      <a class="source-link" href="https://www.bloomberg.com/news/articles/2026-04-01/anthropic-scrambles-to-address-leak-of-claude-code-source-code" target="_blank">&#8599; bloomberg.com</a>
+      <div class="big-number">03</div>
     </div>
 
   </div>
 
-  <!-- TOOL SPOTLIGHT -->
-  <div class="section-header">
-    <span class="section-title">&#128294; Tool Spotlight</span>
-    <div class="section-line"></div>
-    <span class="section-count">New Release</span>
-  </div>
-
-  <div class="spotlight-card news-item" data-tags="openai tools" data-title="gpt-5.4 computer use api openai agents">
-    <div class="spotlight-icon">&#129302;</div>
+  <div class="section-title">&#128161; Tool Spotlight</div>
+  <div class="spotlight news-item" data-tags="openai tools" data-title="GPT-5.4 nano OpenAI Smallest Cheapest API Model Subagent Era">
+    <div class="spotlight-icon">&#9889;</div>
     <div>
-      <div class="spotlight-tag">New API &middot; OpenAI</div>
-      <div class="spotlight-name">GPT-5.4 Computer-Use API</div>
-      <div class="spotlight-desc">GPT-5.4 introduces native, state-of-the-art computer-use capabilities directly into OpenAI's Chat Completions and Responses APIs. Developers can now give agents the ability to observe a screen, click UI elements, type, and execute multi-step workflows across desktop applications &mdash; without integrating third-party automation layers. Combined with the 1M-token context window, agents can plan, execute, and verify tasks across long operational horizons.</div>
-      <div class="why-matters"><strong>Why it matters:</strong> For the first time, a frontier general-purpose model ships with computer-use baked in, collapsing what previously required a separate toolchain (browser agents, RPA, OS-level automation) into a single API call. This dramatically lowers the barrier for teams building autonomous digital-worker pipelines.</div>
-      <a class="card-link" href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" style="margin-top:14px;display:inline-flex;">View API Docs &#8594;</a>
+      <div class="spotlight-tag">New API Model &mdash; OpenAI</div>
+      <div class="spotlight-title">GPT-5.4 nano &mdash; Built for the Subagent Era</div>
+      <div class="spotlight-desc">OpenAI's GPT-5.4 nano is now live in the API at just <strong>$0.20 per 1M input tokens</strong> and $1.25 per 1M output tokens, with a 400k context window. Designed for classification, data extraction, ranking, and lightweight coding subagents, it brings GPT-5.4-class intelligence to the cheapest and fastest endpoint OpenAI has ever shipped. Not available in ChatGPT &mdash; API-only.</div>
+      <div class="spotlight-callout">"Why it matters: For developers building multi-agent pipelines, nano gives you a GPT-5.4-quality brain at a price point where thousands of parallel subagent calls are economical &mdash; unlocking a new class of cost-effective agentic workflows that were previously unviable."</div>
+      <a class="source-link" href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank">&#8599; openai.com</a>
     </div>
   </div>
 
-  <!-- QUICK HITS -->
-  <div class="section-header">
-    <span class="section-title">&#9889; Quick Hits</span>
-    <div class="section-line"></div>
-    <span class="section-count">8 stories</span>
-  </div>
+  <div class="section-title">&#9889; Quick Hits</div>
+  <div class="quick-hits" id="quickHits">
 
-  <div class="quick-hits-list" id="quickHitsList">
-
-    <div class="quick-hit news-item" data-tags="google" data-title="google gemini 3 deep think science olympiad gold medal">
-      <div class="qh-dot" style="background:var(--accent4)"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-google" style="font-size:10px;padding:2px 8px;margin-right:6px;">Google</span>Gemini 3 Deep Think Achieves Gold-Medal Results in Science Olympiads</div>
-        <div class="qh-summary">Google's Gemini 3 Deep Think upgrade demonstrated gold medal-level performance on the written sections of the 2025 International Physics and Chemistry Olympiads, signaling a step-change in AI scientific reasoning. The specialized reasoning mode is now available across Gemini products. DeepMind simultaneously expanded its AI co-scientist access program to all 17 US National Labs.</div>
+    <div class="quick-item news-item" data-tags="google" data-title="Gemini 3 Deep Think Gold Medal Science Reasoning Olympics">
+      <div><div class="quick-dot" style="background:#4285f4;"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-google" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Google</span> &nbsp;Gemini 3 Deep Think Achieves Gold-Medal Science Reasoning</div>
+        <div class="quick-meta">Google released a major upgrade to Gemini 3 Deep Think, demonstrating gold-medal-level performance on the written sections of the 2025 International Physics and Chemistry Olympiads. Built for scientists, Deep Think now spans chemistry, physics, and advanced math at frontier quality, with applications in research and engineering.</div>
+        <a class="quick-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/" target="_blank">&#8599; blog.google</a>
       </div>
-      <a class="qh-link" href="https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="microsoft enterprise" data-title="microsoft copilot unified leadership mustafa suleyman superintelligence">
-      <div class="qh-dot" style="background:var(--accent2)"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-microsoft" style="font-size:10px;padding:2px 8px;margin-right:6px;">Microsoft</span>Microsoft Unifies Copilot Under New Leadership; Suleyman Pivots to Superintelligence</div>
-        <div class="qh-summary">Microsoft consolidated consumer and commercial Copilot operations under a single team on March 17, elevating Jacob Andreou to EVP of Copilot. Mustafa Suleyman pivots to a five-year mission building frontier superintelligence models. The Azure Copilot migration agent, now in public preview, embeds AI across discovery, assessment, planning, and deployment to slash enterprise modernization timelines.</div>
+    <div class="quick-item news-item" data-tags="google enterprise tools" data-title="Gemini in Chrome Rolls Out to Pro Ultra Subscribers Windows Mac">
+      <div><div class="quick-dot" style="background:#4285f4;"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-google" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Google</span> &nbsp;Gemini in Chrome Now Rolling Out on Windows and Mac</div>
+        <div class="quick-meta">Google is rolling out Gemini in Chrome to Pro and Ultra subscribers in the US, featuring a side panel for multitasking, deep Google app integration, and in-tab image editing via "Nano Banana." Built on Gemini 3, it keeps users in their browsing workflow while adding AI assistance and context-aware suggestions.</div>
+        <a class="quick-link" href="https://gemini.google/release-notes/" target="_blank">&#8599; gemini.google</a>
       </div>
-      <a class="qh-link" href="https://blogs.microsoft.com/blog/2026/03/17/announcing-copilot-leadership-update/" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="meta tools" data-title="meta llamacon llama 4 scout maverick multimodal moe behemoth">
-      <div class="qh-dot" style="background:#5bb8ff"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-meta" style="font-size:10px;padding:2px 8px;margin-right:6px;">Meta</span>Meta Previews LlamaCon (Apr 29) &mdash; Llama 4 Scout &amp; Maverick Available Now</div>
-        <div class="qh-summary">Meta's Llama 4 Scout and Maverick are the first open-weight natively multimodal models built on a mixture-of-experts architecture with unprecedented context length. Maverick outperforms GPT-4o and Gemini 2.0 on image-text benchmarks. LlamaCon on April 29 will feature Llama 4 Behemoth, described as "one of the smartest LLMs in the world."</div>
+    <div class="quick-item news-item" data-tags="microsoft enterprise" data-title="Microsoft Pulls Back Copilot AI Windows Removes Intrusive Badges">
+      <div><div class="quick-dot" style="background:#00a4ef;"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-microsoft" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Microsoft</span> &nbsp;Microsoft Scales Back Windows Copilot Integration</div>
+        <div class="quick-meta">Microsoft is removing Copilot AI badges and proactive suggestions from Photos, Widgets, Notepad, and Snipping Tool on Windows 11, signaling a strategic shift toward contextual rather than omnipresent AI. The Copilot icon has also quietly disappeared from many Windows 10 taskbars following user feedback that aggressive AI placement hurt rather than helped UX.</div>
+        <a class="quick-link" href="https://techcrunch.com/2026/03/20/microsoft-rolls-back-some-of-its-copilot-ai-bloat-on-windows/" target="_blank">&#8599; techcrunch.com</a>
       </div>
-      <a class="qh-link" href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="anthropic tools" data-title="anthropic claude haiku 4.5 fast real-time model launch">
-      <div class="qh-dot" style="background:var(--accent3)"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-anthropic" style="font-size:10px;padding:2px 8px;margin-right:6px;">Anthropic</span>Claude Haiku 4.5 Launches &mdash; Near-Frontier Performance at Real-Time Speeds</div>
-        <div class="qh-summary">Anthropic officially launched Claude Haiku 4.5, its fastest and most intelligent Haiku-class model, designed for real-time applications and cost-sensitive deployments. The model delivers near-frontier performance on reasoning and coding tasks while maintaining low latency. Haiku 4.5 is available immediately via the Anthropic API and claude.ai.</div>
+    <div class="quick-item news-item" data-tags="meta hardware" data-title="Meta MTIA Four Chip Generations One Every Six Months Through 2027">
+      <div><div class="quick-dot" style="background:#4b9cf0;"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-meta" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Meta</span> &nbsp;Meta Unveils Four MTIA Chip Generations &mdash; One Every Six Months</div>
+        <div class="quick-meta">Meta revealed MTIA 300, 400, 450, and 500 &mdash; four new generations of custom AI inference chips targeting GenAI workloads at billion-user scale. MTIA 400 has finished testing and is nearing deployment. Unlike the typical 1-2 year industry cadence, Meta is releasing a new chip roughly every six months by using modular, reusable silicon designs.</div>
+        <a class="quick-link" href="https://ai.meta.com/blog/meta-mtia-scale-ai-chips-for-billions/" target="_blank">&#8599; ai.meta.com</a>
       </div>
-      <a class="qh-link" href="https://www.anthropic.com/news" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="policy" data-title="trump administration national ai policy framework regulation congress six pronged">
-      <div class="qh-dot" style="background:#ff9a6c"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-policy" style="font-size:10px;padding:2px 8px;margin-right:6px;">Policy</span>Trump Administration Releases Six-Pronged National AI Policy Framework</div>
-        <div class="qh-summary">The White House unveiled a comprehensive national AI regulatory framework proposing a single federal standard that preempts state-level fragmentation. Key pillars include child-safety rules, standardized permitting for AI data centers, and IP protections. The administration is seeking bipartisan Congressional support to codify it into law in 2026. Colorado's AI Act and California's AI Transparency Act are now in effect.</div>
+    <div class="quick-item news-item" data-tags="funding" data-title="Q1 2026 VC Funding Shatters Records 297B Globally AI Takes 81 Percent">
+      <div><div class="quick-dot" style="background:var(--accent);"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-funding" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Funding</span> &nbsp;Q1 2026 VC Shatters All Records &mdash; $297B Invested, 81% to AI</div>
+        <div class="quick-meta">Crunchbase confirms Q1 2026 set an all-time high for global venture investment at $297 billion, with 81% flowing to AI companies. Four of the five largest venture rounds in history closed in Q1: OpenAI ($120B), Anthropic ($30B), xAI ($20B), and Waymo ($16B) collectively accounting for $186B, or 64% of all global VC in the quarter.</div>
+        <a class="quick-link" href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank">&#8599; crunchbase.com</a>
       </div>
-      <a class="qh-link" href="https://www.cnbc.com/2026/03/20/trump-ai-policy-framework.html" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="openai funding" data-title="openai 110 billion funding largest private venture round history anthropic xai">
-      <div class="qh-dot" style="background:var(--accent4)"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-openai" style="font-size:10px;padding:2px 8px;margin-right:6px;">Funding</span>OpenAI's $110B Round Leads Unprecedented AI Funding Wave in Early 2026</div>
-        <div class="qh-summary">OpenAI's February 2026 $110 billion raise remains the largest private venture deal in history. Anthropic followed with a $30 billion Series G at a $380 billion post-money valuation, while xAI announced a $20 billion round in January. Together just three AI companies absorbed 83% of all global venture capital in February 2026.</div>
+    <div class="quick-item news-item" data-tags="policy" data-title="White House Releases Regulatory Vision AI Innovation First Framework">
+      <div><div class="quick-dot" style="background:var(--accent3);"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-policy" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Policy</span> &nbsp;White House Releases Its Regulatory Vision for AI</div>
+        <div class="quick-meta">The White House published a regulatory framework for AI signaling a largely innovation-first stance that prioritizes US competitiveness while establishing targeted guardrails for high-risk applications. The framework is expected to shape federal agency AI procurement rules and serve as a foundation for national AI governance standards heading into mid-2026.</div>
+        <a class="quick-link" href="https://www.nextgov.com/artificial-intelligence/2026/03/white-house-releases-regulatory-vision-ai/412274/" target="_blank">&#8599; nextgov.com</a>
       </div>
-      <a class="qh-link" href="https://techcrunch.com/2026/03/20/ai-startups-are-eating-the-venture-industry-and-the-returns-so-far-are-good/" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="enterprise funding" data-title="legora 550m series d legal ai platform 5.55 billion valuation">
-      <div class="qh-dot" style="background:var(--accent)"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-security" style="font-size:10px;padding:2px 8px;margin-right:6px;">Enterprise</span>Legora Closes $550M Series D at $5.55B for Collaborative Legal AI</div>
-        <div class="qh-summary">Legora, a collaborative AI platform for legal professionals, completed a $550 million Series D, valuing the company at $5.55 billion. The raise reflects surging enterprise demand for AI systems that can handle complex professional workflows. Household robotics startup Sunday also hit unicorn status with a $165M Series B, targeting real-world pilot deliveries by late 2026.</div>
+    <div class="quick-item news-item" data-tags="anthropic tools" data-title="Anthropic Automated Alignment Agent A3 Self-Correcting LLM Safety">
+      <div><div class="quick-dot" style="background:#c87137;"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-anthropic" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Anthropic</span> &nbsp;Anthropic Introduces Automated Alignment Agent (A3)</div>
+        <div class="quick-meta">Anthropic unveiled A3, an agentic framework that automatically detects and mitigates safety failures in large language models with minimal human intervention. Alongside it, the company released AuditBench &mdash; a benchmark of 56 language models with implanted hidden behaviors designed to measure progress in alignment auditing across the research community.</div>
+        <a class="quick-link" href="https://alignment.anthropic.com/" target="_blank">&#8599; alignment.anthropic.com</a>
       </div>
-      <a class="qh-link" href="https://aifundingtracker.com/ai-startup-funding-news-today/" target="_blank">Source &#8594;</a>
     </div>
 
-    <div class="quick-hit news-item" data-tags="enterprise policy security" data-title="rsac 2026 agentic ai security okta framework kill switch">
-      <div class="qh-dot" style="background:#c084fc"></div>
-      <div class="qh-body">
-        <div class="qh-title"><span class="company-pill pill-security" style="font-size:10px;padding:2px 8px;margin-right:6px;">Security</span>RSAC 2026: Agentic AI Security Dominates &mdash; Okta Unveils Agent Kill Switch Framework</div>
-        <div class="qh-summary">At RSAC 2026, securing agentic AI pipelines was the main conversation. Okta unveiled its Secure Agentic Enterprise Framework, featuring an agent registry with identity-federation-based discovery and a universal kill switch propagated via Okta AI Agents. Gartner predicts 40%+ of enterprise applications will embed role-specific AI agents by 2026, making governance infrastructure critical now.</div>
+    <div class="quick-item news-item" data-tags="policy enterprise" data-title="Colorado AI Act 90 Days to Enforcement June 30 Compliance Deadline">
+      <div><div class="quick-dot" style="background:var(--accent3);"></div></div>
+      <div>
+        <div class="quick-title"><span class="tag-pill tag-policy" style="font-size:9px;padding:2px 7px;vertical-align:middle;">Policy</span> &nbsp;Colorado AI Act: 90 Days to Enforcement &mdash; Enterprise Pressure Mounts</div>
+        <div class="quick-meta">With June 30, 2026 approaching, the Colorado AI Act places new compliance obligations on AI developers and deployers, including requirements to take reasonable care to prevent algorithmic discrimination. Legal experts report accelerating demand for AI governance tooling, impact assessments, and cross-state compliance inventory systems as enterprises race to meet the deadline.</div>
+        <a class="quick-link" href="https://www.wsgr.com/en/insights/2026-year-in-preview-ai-regulatory-developments-for-companies-to-watch-out-for.html" target="_blank">&#8599; wsgr.com</a>
       </div>
-      <a class="qh-link" href="https://kenhuangus.substack.com/p/securing-agentic-ai-rsac-2026s-top" target="_blank">Source &#8594;</a>
     </div>
 
   </div>
 
-  <div class="no-results" id="noResults">No stories match your current filter or search.</div>
+  <div class="no-results" id="noResults">No stories match your current filters. Try a different combination or clear the search.</div>
 
-  <!-- PRIMARY SOURCES -->
-  <div class="section-header" style="margin-top:40px;">
-    <span class="section-title">&#128211; Primary Sources</span>
-    <div class="section-line"></div>
-  </div>
+  <div class="section-title">&#128196; Primary Sources</div>
   <div class="sources-row">
-    <a class="source-btn" href="https://openai.com/news/" target="_blank">OpenAI News</a>
-    <a class="source-btn" href="https://www.anthropic.com/news" target="_blank">Anthropic News</a>
-    <a class="source-btn" href="https://deepmind.google/blog/" target="_blank">DeepMind Blog</a>
-    <a class="source-btn" href="https://ai.meta.com/blog/" target="_blank">Meta AI Blog</a>
-    <a class="source-btn" href="https://blogs.microsoft.com" target="_blank">Microsoft Blog</a>
-    <a class="source-btn" href="https://nvidianews.nvidia.com" target="_blank">NVIDIA Newsroom</a>
-    <a class="source-btn" href="https://blog.google/technology/ai/" target="_blank">Google AI Blog</a>
+    <a class="source-btn" href="https://openai.com/news" target="_blank">&#128279; OpenAI News</a>
+    <a class="source-btn" href="https://www.anthropic.com/news" target="_blank">&#128279; Anthropic News</a>
+    <a class="source-btn" href="https://ai.meta.com/blog" target="_blank">&#128279; Meta AI Blog</a>
+    <a class="source-btn" href="https://deepmind.google/discover/blog" target="_blank">&#128279; DeepMind Blog</a>
+    <a class="source-btn" href="https://blogs.microsoft.com" target="_blank">&#128279; Microsoft Blogs</a>
+    <a class="source-btn" href="https://nvidianews.nvidia.com" target="_blank">&#128279; NVIDIA Newsroom</a>
+    <a class="source-btn" href="https://blog.google" target="_blank">&#128279; Google Blog</a>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-left">
-      AI Daily Update &mdash; <a href="https://georgi-iliev.github.io/ai-daily-update/" target="_blank">georgi-iliev.github.io/ai-daily-update</a>
-      &nbsp;&bull;&nbsp; Updated daily at 08:00 UTC
-    </div>
+    <div class="footer-left">&#169; 2026 AI Daily Update &mdash; High-signal AI intelligence, every day.</div>
     <div class="footer-links">
-      <button class="footer-link" onclick="document.getElementById('embedModal').classList.add('show')">Embed this digest</button>
-      <a class="footer-link" href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" target="_blank">RSS Feed</a>
+      <a class="footer-link" href="https://georgi-iliev.github.io/ai-daily-update/" target="_blank">&#127760; Live Site</a>
+      <a class="footer-link" href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" target="_blank">&#9656; RSS Feed</a>
+      <a class="footer-link" href="#" onclick="openModal(); return false;">&#60;/&#62; Embed</a>
     </div>
   </footer>
 
-</div><!-- /.container -->
+</main>
 
-<!-- EMBED MODAL -->
-<div class="modal-overlay" id="embedModal" onclick="if(event.target===this)this.classList.remove('show')">
+<div class="modal-overlay" id="embedModal" onclick="if(event.target===this)closeModal()">
   <div class="modal">
     <div class="modal-header">
-      <span class="modal-title">Embed &amp; Share</span>
-      <button class="modal-close" onclick="document.getElementById('embedModal').classList.remove('show')">&times;</button>
+      <div class="modal-title">Embed &amp; Share</div>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
     </div>
-    <div class="modal-tabs">
-      <button class="modal-tab active" onclick="switchTab(this,'iframe')">iFrame</button>
-      <button class="modal-tab" onclick="switchTab(this,'widget')">JS Widget</button>
-      <button class="modal-tab" onclick="switchTab(this,'rss')">RSS</button>
-      <button class="modal-tab" onclick="switchTab(this,'json')">JSON API</button>
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab(0)">iFrame</div>
+      <div class="tab" onclick="switchTab(1)">JS Widget</div>
+      <div class="tab" onclick="switchTab(2)">RSS XML</div>
+      <div class="tab" onclick="switchTab(3)">JSON API</div>
     </div>
-    <div class="modal-body">
-
-      <div class="tab-panel active" id="tab-iframe">
-        <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Embed the full AI Daily Update dashboard in any webpage:</p>
-        <pre id="iframe-code">&lt;iframe
+    <div class="tab-panel active" id="tab0">
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:10px;">Embed the full dashboard in any webpage:</p>
+      <div class="code-block">&lt;iframe
   src="https://georgi-iliev.github.io/ai-daily-update/"
-  width="100%"
-  height="800"
+  width="100%" height="600"
   frameborder="0"
-  style="border-radius:12px;border:1px solid #252833;"
-  title="AI Daily Update"&gt;
-&lt;/iframe&gt;</pre>
-        <button class="copy-btn" onclick="copyCode('iframe-code')">Copy Code</button>
-      </div>
+  style="border-radius:12px;"&gt;
+&lt;/iframe&gt;</div>
+    </div>
+    <div class="tab-panel" id="tab1">
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:10px;">Add a floating AI news widget to your site:</p>
+      <div class="code-block">&lt;script
+  src="https://georgi-iliev.github.io/ai-daily-update/widget.js"
+  data-position="bottom-right"
+  data-theme="dark"
+  async&gt;
+&lt;/script&gt;</div>
+    </div>
+    <div class="tab-panel" id="tab2">
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:10px;">Subscribe via any RSS reader:</p>
+      <div class="code-block">https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss
 
-      <div class="tab-panel" id="tab-widget">
-        <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Add a floating digest widget to any site:</p>
-        <pre id="widget-code">&lt;script&gt;
-(function(){
-  var s = document.createElement('script');
-  s.src = 'https://georgi-iliev.github.io/ai-daily-update/widget.js';
-  s.dataset.theme = 'dark';
-  s.dataset.position = 'bottom-right';
-  document.head.appendChild(s);
-})();
-&lt;/script&gt;</pre>
-        <button class="copy-btn" onclick="copyCode('widget-code')">Copy Code</button>
-      </div>
-
-      <div class="tab-panel" id="tab-rss">
-        <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Subscribe to the RSS feed in any reader:</p>
-        <pre id="rss-code">https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss
-
-&lt;link rel="alternate" type="application/rss+xml"
+&lt;!-- Add to your HTML head --&gt;
+&lt;link rel="alternate"
+  type="application/rss+xml"
   title="AI Daily Update"
-  href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss" /&gt;</pre>
-        <button class="copy-btn" onclick="copyCode('rss-code')">Copy URL</button>
-      </div>
-
-      <div class="tab-panel" id="tab-json">
-        <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Consume today's digest programmatically via the RSS feed:</p>
-        <pre id="json-code">fetch('https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss')
-  .then(r => r.text())
-  .then(xml => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(xml, 'application/xml');
-    const items = doc.querySelectorAll('item');
-    items.forEach(item => {
-      console.log(item.querySelector('title').textContent);
-    });
-  });</pre>
-        <button class="copy-btn" onclick="copyCode('json-code')">Copy Code</button>
-      </div>
-
+  href="https://georgi-iliev.github.io/ai-daily-update/ai-daily-update.rss"
+/&gt;</div>
+    </div>
+    <div class="tab-panel" id="tab3">
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:10px;">Fetch today's digest as JSON:</p>
+      <div class="code-block">fetch('https://georgi-iliev.github.io/ai-daily-update/api/today.json')
+  .then(r =&gt; r.json())
+  .then(data =&gt; console.log(data.stories));</div>
     </div>
   </div>
 </div>
 
 <script>
-  function filterPill(btn, tag) {
-    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
+  let activeFilters = new Set();
+
+  function toggleFilter(pill) {
+    const f = pill.dataset.filter;
+    if (activeFilters.has(f)) {
+      activeFilters.delete(f);
+      pill.classList.remove('active');
+    } else {
+      activeFilters.add(f);
+      pill.classList.add('active');
+    }
     applyFilters();
   }
 
-  function doSearch(val) {
-    applyFilters();
-  }
+  function doSearch(val) { applyFilters(val); }
 
-  function applyFilters() {
-    const activePill = document.querySelector('.filter-pill.active');
-    const activeTag = activePill ? activePill.textContent.trim().toLowerCase() : 'all';
-    const query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+  function applyFilters(searchVal) {
+    if (searchVal === undefined) searchVal = document.getElementById('searchInput').value;
+    const query = searchVal.toLowerCase().trim();
     const items = document.querySelectorAll('.news-item');
+    let visible = 0;
     items.forEach(item => {
       const tags = (item.dataset.tags || '').toLowerCase();
       const title = (item.dataset.title || '').toLowerCase();
-      const tagMatch = (activeTag === 'all') || tags.includes(activeTag);
-      const searchMatch = !query || title.includes(query) || tags.includes(query);
-      item.style.display = (tagMatch && searchMatch) ? '' : 'none';
+      const text  = item.textContent.toLowerCase();
+      let show = true;
+      if (activeFilters.size > 0) {
+        let matchAny = false;
+        activeFilters.forEach(f => { if (tags.includes(f)) matchAny = true; });
+        if (!matchAny) show = false;
+      }
+      if (query && !title.includes(query) && !text.includes(query)) show = false;
+      item.style.display = show ? '' : 'none';
+      if (show) visible++;
     });
-    checkNoResults();
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
   }
 
-  function checkNoResults() {
-    const visible = [...document.querySelectorAll('.news-item')].some(el => el.style.display !== 'none');
-    document.getElementById('noResults').classList.toggle('show', !visible);
-  }
+  function openModal()  { document.getElementById('embedModal').classList.add('open'); }
+  function closeModal() { document.getElementById('embedModal').classList.remove('open'); }
 
-  function switchTab(btn, id) {
-    document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-' + id).classList.add('active');
-  }
-
-  function copyCode(id) {
-    const el = document.getElementById(id);
-    navigator.clipboard.writeText(el.textContent).then(() => {
-      const btn = el.nextElementSibling;
-      const orig = btn.textContent;
-      btn.textContent = 'Copied!';
-      setTimeout(() => btn.textContent = orig, 1800);
-    });
+  function switchTab(idx) {
+    document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+    document.querySelectorAll('.tab-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
   }
 </script>
-
 </body>
 </html>
